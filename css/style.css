@@ -1,3 +1,19 @@
 body {
     background-color: rgb(210, 203, 203);
 }
+
+body header span a{
+    color:brown;
+}
+
+/*1. fjerne understrek på logo
+/*2. legge inn bakgrunnsbilder 
+/*3. endre bildestørrelse
+SPØRSMÅL: hvordan skille css for de tre ulike sidene i samme dokument*/
+
+/*Link til bilder brukt på forsiden
+ <!--https://pixabay.com/no/photos/blomster-grener-t%C3%B8rke-t%C3%B8rket-3876195/-->
+ <!--https://pixabay.com/no/photos/mennesker-sm%C3%A5gutter-parkere-barn-1560569/-->
+ <!--https://pixabay.com/no/photos/jenter-benk-latter-ler-venner-1853958/-->
+ <!--https://pixabay.com/no/photos/mann-modell-portrett-ansikt-7275449/-->
+ */
