@@ -1,25 +1,24 @@
+
+body {
+    background-color: rgb(255, 255, 255);
+}
 #grid-container{
     width: 100%;
     display: grid;
-    grid-template-areas:"header" " main" "footer";
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    grid-template-areas:"header" " main" "footer";
+    align-content:space-evenly;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#header{
+header{
     grid-area: header;
     background-color: rgb(6, 65, 6);
     color: rgb(255, 255, 255);
 }
 
-body {
-    background-color: rgb(255, 255, 255);
-}
-
-header nav ul{
+div header nav ul li{
     color:rgb(255, 255, 255);
     text-decoration: none;
     list-style: none;
