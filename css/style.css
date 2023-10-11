@@ -1,13 +1,12 @@
 #grid-container{
+    width: 100%;
     display: grid;
     grid-template-areas:"header header header" " aside main main" "footer footer footer";
     grid-row-gap: 10px;
     grid-column-gap: 10px;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-rows: auto auto auto;
     font-family: Arial, Helvetica, sans-serif;
-
-
 }
 
 #header{
@@ -19,7 +18,7 @@ body {
     background-color: rgb(210, 203, 203);
 }
 
-body header span a{
+body div header nav h1{
     color:brown;
 }
 
@@ -50,10 +49,10 @@ footer{
 
 
 
-/*1. fjerne understrek på logo
+/*1. fjerne understrek og blåtekst på logo
 /*2. legge inn bakgrunnsbilder 
 /*3. endre bildestørrelse
-SPØRSMÅL: hvordan skille css for de tre ulike sidene i samme dokument*/
+*/
 
 /*Link til bilder brukt på forsiden
  <!--https://pixabay.com/no/photos/blomster-grener-t%C3%B8rke-t%C3%B8rket-3876195/-->
