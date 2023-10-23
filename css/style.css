@@ -26,15 +26,12 @@ header{
 
 header nav ul{
     list-style: none;
-    display: flex;
 }
 
 header ul li a{
     color: rgb(255, 255, 255);
     justify-content: space-between;
-    text-overflow: clip;
     text-decoration: none;
-    padding-right: 1rem;
 }
  
 header nav h1 a{
@@ -49,19 +46,26 @@ header nav h1 a{
     justify-content:left;
     gap: 5%;
     padding:25px;
-
 }
 
 /*Header for produkt.html og leveranse.html*/
-#header nav ul li{
-    display: flex;
-    justify-content: space-between;
-    padding-right: 0.5rem;
+#header nav ul li a{
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content:left;
 }
 
-.navbar ul{
-    justify-content: flex-start;
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
+.navbar li a{
+    font-size: 4vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 /*
@@ -101,7 +105,6 @@ header nav h1 a{
 
 }
 
-
 /*Undertittel på leveranse.html*/
 #leveranse h5{
     display: inline-block;
@@ -137,13 +140,15 @@ button {
  }
  /*KILDE: brukt https://stackoverflow.com/questions/15461317/button-background-image for å sette inn bakgrunnsbilde på knapp*/
 
+#forside-seksjoner article{
+    margin-bottom: 2rem;
+}
+
 /*Nedenfor er koding for hver atikkel på index.html*/ 
 .kampanje {
     background-image: url('img/flowers-3876195_960_720.jpg');
     /*KILDE: bilde hentet fra https://pixabay.com/no/photos/blomster-grener-t%C3%B8rke-t%C3%B8rket-3876195/*/
     background-size: cover;
-    width: 300px;
-    height: 100px;
     border: 3px solid rgb(23, 123, 23);
     border-radius: 20px;
     opacity: 0.6;
@@ -158,8 +163,6 @@ button {
     background-image: url('img/people-1560569_960_720.jpg');
     /*KILDE: bilde hentet fra https://pixabay.com/no/photos/mennesker-sm%C3%A5gutter-parkere-barn-1560569/*/
     background-size: cover;
-    width: 300px;
-    height: 100px;
     border: 3px solid rgb(23, 123, 23);
     border-radius: 20px;
     opacity: 0.6;
@@ -174,8 +177,6 @@ button {
     background-image: url('img/girls-1853958_1280.jpg');
     /*KILDE: bilde hentet fra https://pixabay.com/no/photos/jenter-benk-latter-ler-venner-1853958/*/
     background-size: cover;
-    width: 300px;
-    height: 100px;
     border: 3px solid rgb(23, 123, 23);
     border-radius: 20px;
     opacity: 0.6;
@@ -190,8 +191,6 @@ button {
     background-image: url('img/male-7275449_960_720.jpg');
     /*KILDE: bilde hentet fra https://pixabay.com/no/photos/mann-modell-portrett-ansikt-7275449/*/
     background-size: cover;
-    width: 300px;
-    height: 100px;
     border: 3px solid rgb(23, 123, 23);
     border-radius: 20px;
     opacity: 0.6;
@@ -203,8 +202,6 @@ button {
 }
 
 .informasjon {
-    width: 300px;
-    height: 100px;
     border: 3px solid rgb(23, 123, 23);
     border-radius: 20px;
     opacity: 0.6;
@@ -238,14 +235,13 @@ img{
     margin: 0.5rem;
     padding: 0.5rem;
     font-size: smaller;
-
 }
 
 /*Nedenfor er koding for seksjon på leveranse.html*/
 .textbox{
     grid-area: main;
     width: 100%;
-    height: 120%;
+    height: 100px;
     text-align: left;
     margin: 1rem;
     padding: 2rem;
@@ -283,45 +279,51 @@ footer p{
         float: right;
     }
 
+    .navbar li a{
+        font-size: 2vw;
+    }
+
     main{
         grid-area: main;
         width: 100%;
         float: right;
     }
 
-    /*Nedenfor er koding for hver atikkel på index.html*/ 
+
+
+    /*Nedenfor er koding for hver atikkel på index.html*/
     .kampanje{
-        min-width: 500px;
-        max-width: 1400px;
-        min-height: 200px;
+      width: 150%;
     }
 
     .barn{
-        min-width: 500px;
-        max-width: 1400px;
-        min-height: 200px;
+        width: 150%;
     }
 
     .dame {
-        min-width: 500px;
-        max-width: 1400px;
-        min-height: 200px;
+        width: 150%;
     }
 
     .herre {
-        min-width: 500px;
-        max-width: 1400px;
-        min-height: 200px;
+        width: 150%;
     }
 
     .informasjon {
-        min-width: 500px;
-        max-width: 1400px;
-        min-height: 200px;
+        width: 150%;
+
+    }
+    /*Koding for alle atikkel-modulene på produkt.html*/ 
+
+    #forside-seksjoner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
-
-    /*Koding for alle atikkel-modulene på produkt.html*/ 
+    #forside-seksjoner article{
+        max-width: 300px;
+        width: 100%;
+    }
 
     #product-box{
         display: flex;
@@ -347,12 +349,13 @@ footer p{
     .textbox{
         max-width: 900px;
         width: 100%;
-        height: 65%;
+        height: 75%;
     }
     
     footer{
     grid-area: footer;
-    width: 75%;
+    margin-top: 3rem;
+    width: 100%;
     float: right;
     }
 }
