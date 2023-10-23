@@ -4,47 +4,78 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/fontawesome/css/fontawesome.css">
+        <link rel="stylesheet" href="css/fontawesome/css/brands.css">
+        <link rel="stylesheet" href="css/fontawesome/css/solid.css">
         <title>CAHALA Shoe forside</title>
     </head>
-
-    <body class="index">
+    <body>
         <div id="grid-container" >
             <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Hjem</a></li>
-                    <li><a href="">Profil</a></li>
-                    <li><a href="#">Favoritter</a></li>
-                    <li><a href="#">Handlekurv</a></li>
-                    <li><a href="">Søk</a></li>
-<!--FYLLE INN MED IKONER OG LINK TIL SIDENE-->
-                </ul>
-            </nav>
+                <div class="flex-container">
+                    <nav>
+                        <i id="ham" class="fa-solid fa-bars" style="color: #ffffff;"></i>
+                        <i id="user" class="fa-solid fa-user" style="color: #ffffff;"></i>
+                        <i id="heart" class="fa-solid fa-heart" style="color: #ffffff;"></i>
+                        <i id="shopping" class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                        <i id="search" class="fa-regular fa-magnifying-glass" style="color: #ffffff;"></i>
+                        <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
+                        <ul class="navbar">
+                            <li><a href="index.html">Meny</a></li>
+                            <li><a href="#">Profil</a></li>
+                            <li><a href="#">Favoritter</a></li>
+                            <li><a href="#">Handlekurv</a></li>
+                            <li><a href="#">Søk</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </header>
-            <main>
+            <main id="seksjoner">
                 <section>
-                <h1><a href="index.html">CAHALA Shoe</a></h1>
+                    <h1><a href="index.html">CAHALA Shoe</a></h1>
 
-                <article id="kampanje">
-                    <h3><a href="produkt.html">KAMPANJE</a></h3>
-                </article>
+                    <article>
+                        <button class="kampanje" onclick="window.location.href='produkt.html'">kampanje</button>
+                    </article>
 
-                <article>
-                    <h3><a href="#">BARN</a></h3>
-                </article>
+                    <article>
+                        <button class="barn" onclick="window.location.href='#'">barn</button>
+                    </article> 
 
-                <article>
-                    <h3><a href="#">DAME</a></h3>
-                </article>
+                    <article>
+                        <button class="dame"  onclick="window.location.href='#'">dame</button>
+                    </article>
 
-                <article>
-                    <h3><a href="#">HERRE</a></h3>
-                </article>
-            </section>
+                    <article>
+                        <button class="herre" onclick="window.location.href='#'">herre</button>
+                    </article>
+
+                    <article>
+                        <button class="informasjon" onclick="window.location.href='leveranse.html'">informasjon</button>
+                    </article>
+                    <!--KILDE: brukt https://www.altcademy.com/blog/how-to-link-a-button-to-another-page-in-html/ for å få til link på knapp-->
+                </section>
             </main>
-            <footer>
-                <p>Kontakt oss</p>
+            <footer id="flex-bottom">
+                <p><i class="fa-brands fa-instagram" style="color: #177b17;"></i></p>
+                <p><i class="fa-brands fa-square-facebook" style="color: #177b17;"></i></p>
+                <p class="contact">Kontakt oss</p>
+                <p><i class="fa-solid fa-envelope" style="color: #177b17;"></i></p>
+                <p><i class="fa-solid fa-phone" style="color: #177b17;"></i></p>
+                <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
             </footer>
         </div>
+        <script>
+            let x = document.querySelector(".navbar")
+            document.getElementById("ham").addEventListener("click", (e) => {
+
+                if (x.className === "navbar") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navbar"
+                }
+            })
+            //KILDE: det som står i script er hentet fra forelesning 16.oktober 2023.
+        </script>
     </body>
 </html>

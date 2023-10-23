@@ -4,77 +4,135 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/fontawesome/css/fontawesome.css">
+        <link rel="stylesheet" href="css/fontawesome/css/brands.css">
+        <link rel="stylesheet" href="css/fontawesome/css/solid.css">
         <title>CAHALA Shoe produkter</title>
     </head>
     <body class="produkt">
         <div id="grid-container">
             <header id="header">
-            <nav>
-                <h1><a href="index.html">CAHALA Shoe</a></h1>
-                <ul>
-                    <li><a href="index.html">Hjem</a></li>
-                    <li><a href="">Profil</a></li>
-                    <li><a href="#">Favoritter</a></li>
-                    <li><a href="#">Handlekurv</a></li>
-                    <li><a href="">Søk</a></li>
-<!--FYLLE INN MED IKONER OG LINK TIL SIDENE-->
-                </ul>
-            </nav>
+                <div class="flex-container">
+                    <nav>
+                        <h1><a href="index.html">CAHALA Shoe</a></h1>
+                        <i id="ham" class="fa-solid fa-bars" style="color: #ffffff;"></i>
+                        <i id="user" class="fa-solid fa-user" style="color: #ffffff;"></i>
+                        <i id="heart" class="fa-solid fa-heart" style="color: #ffffff;"></i>
+                        <i id="shopping" class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                        <i id="search" class="fa-regular fa-magnifying-glass" style="color: #ffffff;"></i>
+                        <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
+                        <ul class="navbar">
+                            <li><a href="index.html">Meny</a></li>
+                            <li><a href="#">Profil</a></li>
+                            <li><a href="#">Favoritter</a></li>
+                            <li><a href="#">Handlekurv</a></li>
+                            <li><a href="#">Søk</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </header>
             <main>
-                <p><a href="index.html">forsiden  </a><a href="leveranse.html">&#8594;  leveranse</a></p>
-<!--KILDE: hentet informasjon om å sette inn pil fra denne siden https://www.thoughtco.com/arrow-symbols-on-web-page-3466516-->
+                <section class="stilstruktur">
+                    <p><a href="index.html">forsiden  </a><a href="leveranse.html">&#8594;  produkter</a></p>
+                    <!--KILDE: hentet informasjon om å sette inn pil fra denne siden https://www.thoughtco.com/arrow-symbols-on-web-page-3466516-->
+                </section>
                 <h1>KAMPANJE</h1>
-                <p>Filtrer</p>
                 <!--MÅ FIKSE LINK TIL FILTER-->
-                <article>
-                    <ul>
-                        <li>Størrelse: 40-45</li>
-                        <li>Farge: brun, sort</li>
-                        <li>Spesifikasjon: Gortex</li>
-                        <li>Varebeholdning: på lager</li>
-                        <li>Pris: 1999,-</li>
-                    </ul>
-                </article>
-                <article>
-                    <ul>
-                        <li>Størrelse: 38-42</li>
-                        <li>Farge: grå med mønster</li>
-                        <li>Spesifikasjon: tøysko</li>
-                        <li>Varebeholdning: på lager</li>
-                        <li>Pris: 999,-</li>
-                </article>
-                <article>
-                    <ul>
-                        <li>Størrelse: 36-40</li>
-                        <li>Farge: rød</li>
-                        <li>Spesifikasjon: pensko</li>
-                        <li>Varebeholdning: på lager</li>
-                        <li>Pris: 799,-</li>
-                    </ul>
-                </article>
-                <article>
-                    <ul>
-                        <li>Størrelse: 38-42</li>
-                        <li>Farge: grå, hvit, blå</li>
-                        <li>Spesifikasjon: tøysko</li>
-                        <li>Varebeholdning: på lager</li>
-                        <li>Pris: 999,-</li>
-                    </ul>
-                </article>
-                <article>
-                    <ul>
-                        <li>Størrelse: 37-43</li>
-                        <li>Farge: rosa, blå/li>
-                        <li>Spesifikasjon: Gortex</li>
-                        <li>Varebeholdning: på lager</li>
-                        <li>Pris: 1599,-</li>
-                    </ul>
-                </article>
+                <section id="product-box">
+                    <div class="filter">
+                        <p>Filtrer</p>
+                    </div>
+                    <article  class="gortex">
+                        <img src="css/img/shoes-584850_960_720.jpg" alt="Brown Gortex Shoe">
+                        <!--KILDE: bilde hentet fra https://pixabay.com/no/photos/sko-fott%C3%B8y-tursko-g%C3%A5-utend%C3%B8rs-584850/-->
+                        <ul>
+                            <li>Størrelse: 40-45</li>
+                            <li>Farge: brun, sort</li>
+                            <li>Spesifikasjon: Gortex</li>
+                            <li>Varebeholdning: på lager</li>
+                            <li>Pris: 1999,-</li>
+                        </ul>
+                            <i class="fa-regular fa-heart" style="color: #177b17;"></i>
+                            <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
+                    </article>
+
+                    <article class="sneakers">
+                        <img src="css/img/shoes-1433925_960_720.jpg" alt="Grey sneakers with cartoons">
+                        <!--KILDE: bilde hentet fra https://pixabay.com/no/photos/sko-joggesko-converse-fott%C3%B8y-1433925/-->
+                        <ul>
+                            <li>Størrelse: 38-42</li>
+                            <li>Farge: grå med mønster</li>
+                            <li>Spesifikasjon: tøysko</li>
+                            <li>Varebeholdning: på lager</li>
+                            <li>Pris: 999,-</li>
+                        </ul>
+                            <i class="fa-regular fa-heart" style="color: #177b17;"></i>
+                            <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
+                    </article>
+
+                    <article class="pumps">
+                        <img src="css/img/womens-shoes-178162_960_720.jpg" alt="Red pumps">
+                        <!--KILDE: bilde hentet fra https://pixabay.com/no/photos/kvinners-sko-r%C3%B8d-pin-mote-178162/-->
+                        <ul>
+                            <li>Størrelse: 36-40</li>
+                            <li>Farge: rød</li>
+                            <li>Spesifikasjon: pensko</li>
+                            <li>Varebeholdning: på lager</li>
+                            <li>Pris: 799,-</li>
+                        </ul>
+                            <i class="fa-regular fa-heart" style="color: #177b17;"></i>
+                            <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
+                    </article>
+
+                    <article class="nike">
+                        <img src="css/img/shoes-791044_960_720.jpg" alt="Grey Nike Shoe">
+                        <!--KILDE: bildet hentet fra https://pixabay.com/no/photos/sko-kvinne-pike-sport-jogge-l%C3%B8per-791044/-->
+                        <ul>
+                            <li>Størrelse: 38-42</li>
+                            <li>Farge: grå, hvit, blå</li>
+                            <li>Spesifikasjon: tøysko</li>
+                            <li>Varebeholdning: på lager</li>
+                            <li>Pris: 999,-</li>
+                        </ul>
+                            <i class="fa-regular fa-heart" style="color: #177b17;"></i>
+                            <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
+                    </article>
+
+                    <article class="pinkshoe">
+                        <img src="css/img/running-shoe-371624_960_720.jpg" alt="Pink sneakers">
+                        <!--KILDE: bildet hentet fra https://pixabay.com/no/photos/l%C3%B8pesko-sko-brooks-371624/-->
+                        <ul>
+                            <li>Størrelse: 37-43</li>
+                            <li>Farge: rosa, blå</li>
+                            <li>Spesifikasjon: Gortex</li>
+                            <li>Varebeholdning: på lager</li>
+                            <li>Pris: 1599,-</li>
+                        </ul>
+                            <i class="fa-regular fa-heart" style="color: #177b17;"></i>
+                            <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
+                    </article>
+                </section>
             </main>
-            <footer>
-                <p>Kontakt oss</p>
+            <footer class="flex-bottom">
+                <p class="insta"><i class="fa-brands fa-instagram" style="color: #177b17;"></i></p>
+                <p class="face"><i class="fa-brands fa-square-facebook" style="color: #177b17;"></i></p>
+                <p class="contact">Kontakt oss</p>
+                <p class="mail"><i class="fa-solid fa-envelope" style="color: #177b17;"></i></p>
+                <p class="phone"><i class="fa-solid fa-phone" style="color: #177b17;"></i></p>
+                <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
             </footer>
         </div>
+        <script>
+            let x = document.querySelector(".navbar")
+            document.getElementById("ham").addEventListener("click", (e) => {
+
+                if (x.className === "navbar") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navbar"
+                }
+            })
+            //KILDE: det som står i script er hentet fra forelesning 16.oktober 2023.
+        </script>
     </body>
 </html>

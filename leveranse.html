@@ -4,46 +4,76 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/fontawesome/css/fontawesome.css">
+        <link rel="stylesheet" href="css/fontawesome/css/brands.css">
+        <link rel="stylesheet" href="css/fontawesome/css/solid.css">
         <title>CAHALA Shoe informasjon</title>
     </head>
     <body class="leveranse">
         <div id="grid-container">
             <header id="header">
-            <nav>
-                <h1><a href="index.html">CAHALA Shoe</a></h1>
-                <ul>
-                    <li><a href="index.html">Hjem</a></li>
-                    <li><a href="">Profil</a></li>
-                    <li><a href="#">Favoritter</a></li>
-                    <li><a href="#">Handlekurv</a></li>
-                    <li><a href="">Søk</a></li>
-<!--FYLLE INN MED IKONER OG LINK TIL SIDENE-->
-                </ul>
-            </nav>
+                <div class="flex-container">
+                    <nav>
+                        <h1><a href="index.html">CAHALA Shoe</a></h1>
+                        <i id="ham" class="fa-solid fa-bars" style="color: #ffffff;"></i>
+                        <i id="user" class="fa-solid fa-user" style="color: #ffffff;"></i>
+                        <i id="heart" class="fa-solid fa-heart" style="color: #ffffff;"></i>
+                        <i id="shopping" class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                        <i id="search" class="fa-regular fa-magnifying-glass" style="color: #ffffff;"></i>
+                        <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
+                        <ul class="navbar">
+                            <li><a href="index.html">Meny</a></li>
+                            <li><a href="#">Profil</a></li>
+                            <li><a href="#">Favoritter</a></li>
+                            <li><a href="#">Handlekurv</a></li>
+                            <li><a href="#">Søk</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </header>
-            <main>
-                <p><a href="index.html">forsiden  </a><a href="leveranse.html">&#8594;  leveranse</a></p>
-<!--KILDE: hentet informasjon om å sette inn pil fra denne siden
-https://www.thoughtco.com/arrow-symbols-on-web-page-3466516-->
-                <h1>LEVERANSE</h1>
-                <h5>Betaling</h5>
-                <h5>Leveranse</h5>
-                <h5>Retur</h5>
-                <h5>Kontakt oss</h5>
-                <ul><p>Levering skjer med posten. Valget for hvordan de ønsker dine varer levert velder du
-                i forbindelse med fullføring av kjøpet. Du kan velge alternativet som passer deg best.</p>
-                <p>Leverigsalternativene du kan velge mellom er;</p>
-                <li>hjem i din postkasse</li>
-                <li>nærmeste post i butikk</li>
-                <li>hente pakken i pakkeautomat</li>
-                <p>Dersom du bestiller flere varer og en varene ikke er på lager vil du motta informasjon
-                angående leveransen og varen kan bli sendt i to pakker.</p>
-
-                </ul>
+            <main id="leveranse">
+                <section class="stilstruktur">
+                    <p><a href="index.html">forsiden </a><a href="leveranse.html">&#8594; informasjon</a></p>
+                </section>
+                <!--KILDE: hentet informasjon om å sette inn pil fra denne siden https://www.thoughtco.com/arrow-symbols-on-web-page-3466516-->
+                    <h1>LEVERANSE</h1>
+                    <h5>Betaling</h5>
+                    <h5>Leveranse</h5>
+                    <h5>Retur</h5>
+                    <h5>Kontakt oss</h5>
+                <section class="textbox">
+                    <p>Levering skjer med posten. Valget for hvordan de ønsker dine varer levert velder du i forbindelse med fullføring av kjøpet. 
+                    Du kan velge alternativet som passer deg best.</p>
+                    <p>Leverigsalternativene du kan velge mellom er;</p>
+                    <ul>
+                        <li>hjem i din postkasse</li>
+                        <li>nærmeste post i butikk</li>
+                        <li>hente pakken i pakkeautomat</li>
+                    </ul>
+                    <p>Dersom du bestiller flere varer og en varene ikke er på lager vil du motta informasjon angående leveransen og varen kan bli 
+                    sendt i to pakker.</p>
+                </section>
             </main>
-            <footer>
-                <p>Kontakt oss</p>
+            <footer class="flex-bottom">
+                <p class="insta"><i class="fa-brands fa-instagram" style="color: #177b17;"></i></p>
+                <p class="face"><i class="fa-brands fa-square-facebook" style="color: #177b17;"></i></p>
+                <p class="contact">Kontakt oss</p>
+                <p class="mail"><i class="fa-solid fa-envelope" style="color: #177b17;"></i></p>
+                <p class="phone"><i class="fa-solid fa-phone" style="color: #177b17;"></i></p>
+                <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
             </footer>
         </div>
+        <script>
+            let x = document.querySelector(".navbar")
+            document.getElementById("ham").addEventListener("click", (e) => {
+
+                if (x.className === "navbar") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navbar"
+                }
+            })
+            //KILDE: det som står i script er hentet fra forelesning 16.oktober 2023.
+        </script>
     </body>
 </html>

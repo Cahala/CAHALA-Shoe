@@ -1,105 +1,359 @@
 *{
     box-sizing: border-box;
 }
-body {
-    background-color: rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    text-align: center;
-}
 
 #grid-container{
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas:"header" " main" "footer";
-    align-content:space-evenly;
-    
+    grid-template-areas:"header" "main" "footer";
+ 
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    margin: 0;
 }
 
 header{
     grid-area: header;
     background-color: rgb(32, 123, 32);
     color: rgb(255, 255, 255);
+    text-align: center;
 }
 
-header li{
+header nav ul{
     list-style: none;
-    
+    display: flex;
 }
 
-header li a{
+header ul li a{
+    color: rgb(255, 255, 255);
+    justify-content: space-between;
+    text-overflow: clip;
+    text-decoration: none;
+    padding-right: 1rem;
+}
+ 
+header nav h1 a{
     color: rgb(255, 255, 255);
     text-decoration: none;
+    text-align: center;
 }
 
-main{
+/*Ikoner i head-delen*/
+.flex-container{
+    align-items: flex-start;
+    justify-content:left;
+    gap: 5%;
+    padding:25px;
+
+}
+
+/*Header for produkt.html og leveranse.html*/
+#header nav ul li{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0.5rem;
+}
+
+.navbar ul{
+    justify-content: flex-start;
+
+}
+
+/*
+.responsive {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #242424;
+    margin: 0;
+    padding: 0;
+    top: 40px;
+    width: 100%;
+    list-style: none;
+}
+
+.responsive a {
+    color: #fff;
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+}
+*/
+
+/*Navigering stistruktur for produkt.html og leveranse.html*/
+.stilstruktur p{
+    text-align: left;
+    padding: 0.5rem;
+}
+
+.filter{
+    text-align: right;
+}
+
+/*Overskrift på leveranse.html*/
+#leveranse h1{
+    text-align: center;
+
+}
+
+
+/*Undertittel på leveranse.html*/
+#leveranse h5{
+    display: inline-block;
+    vertical-align: baseline;
+    justify-content: center;
+    padding-left: 0.5rem;
+    padding-right: 1rem;
+    margin: 0;
+}
+
+/*Overskrift for index.html*/
+main h1{
     grid-area: main;
-    padding: 2rem;
+    padding: 10px;
+    margin-bottom: 5%;
+    text-align: center;
 }
 
+/*Overskrift for index.html*/
 main h1 a{
     text-decoration: none;
     color:rgb(23, 123, 23);
-    padding: 20px;
-    margin-bottom: 15px;
+    font-size: calc(1em + 1vw); 
 }
 
-main h3 a{
-    text-decoration: none;
-    color:rgb(0, 0, 0);
-    border-radius: 10px;
-    border: 4px solid rgb(23, 123, 23);
-    padding: 15px; 
-    margin: 40px;
-    width: 150px;
+/*INDEX.HTML: Seksjoner med artikler som er knapper for ulike tema; kampanje, barn, dame, herre og informasjon*/
+button {
+    border: 2px solid rgb(23, 123, 23);
+    border-radius: 20px;
+    width: 300px;
     height: 100px;
+    margin: 1.5rem;
+ }
+ /*KILDE: brukt https://stackoverflow.com/questions/15461317/button-background-image for å sette inn bakgrunnsbilde på knapp*/
+
+/*Nedenfor er koding for hver atikkel på index.html*/ 
+.kampanje {
+    background-image: url('img/flowers-3876195_960_720.jpg');
+    /*KILDE: bilde hentet fra https://pixabay.com/no/photos/blomster-grener-t%C3%B8rke-t%C3%B8rket-3876195/*/
+    background-size: cover;
+    width: 300px;
+    height: 100px;
+    border: 3px solid rgb(23, 123, 23);
+    border-radius: 20px;
+    opacity: 0.6;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: calc(1em + 1vw); 
+    font-weight: bold;
 }
 
+.barn{
+    background-image: url('img/people-1560569_960_720.jpg');
+    /*KILDE: bilde hentet fra https://pixabay.com/no/photos/mennesker-sm%C3%A5gutter-parkere-barn-1560569/*/
+    background-size: cover;
+    width: 300px;
+    height: 100px;
+    border: 3px solid rgb(23, 123, 23);
+    border-radius: 20px;
+    opacity: 0.6;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: calc(1em + 1vw); 
+    font-weight: bold;
+}
 
-/*KILDE for å få til corner https://www.w3schools.com/css/tryit.asp?filename=trycss3_border-radius*/
+.dame{
+    background-image: url('img/girls-1853958_1280.jpg');
+    /*KILDE: bilde hentet fra https://pixabay.com/no/photos/jenter-benk-latter-ler-venner-1853958/*/
+    background-size: cover;
+    width: 300px;
+    height: 100px;
+    border: 3px solid rgb(23, 123, 23);
+    border-radius: 20px;
+    opacity: 0.6;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: calc(1em + 1vw); 
+    font-weight: bold;
+}
+
+.herre{
+    background-image: url('img/male-7275449_960_720.jpg');
+    /*KILDE: bilde hentet fra https://pixabay.com/no/photos/mann-modell-portrett-ansikt-7275449/*/
+    background-size: cover;
+    width: 300px;
+    height: 100px;
+    border: 3px solid rgb(23, 123, 23);
+    border-radius: 20px;
+    opacity: 0.6;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 130%;
+    font-weight: bold;
+}
+
+.informasjon {
+    width: 300px;
+    height: 100px;
+    border: 3px solid rgb(23, 123, 23);
+    border-radius: 20px;
+    opacity: 0.6;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: calc(1em + 1vw); 
+    font-weight: bold;
+}
+
+img{
+    max-width: 155px;
+    width: 100%;
+}
+
+/*Koding for alle atikkel-modulene på produkt.html*/ 
+
+#product-box{
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+    
+}
+#product-box article{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 3px solid rgb(23, 123, 23);
+    border-radius: 20px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: smaller;
+
+}
+
+/*Nedenfor er koding for seksjon på leveranse.html*/
+.textbox{
+    grid-area: main;
+    width: 100%;
+    height: 120%;
+    text-align: left;
+    margin: 1rem;
+    padding: 2rem;
+    border: 3px solid rgb(23, 123, 23);
+}
 
 footer{
+    display: flex;
+    text-align: right;
     grid-area: footer;
-    padding: 2rem;
+    padding: 1rem;
+    gap: 5%;
 }
 
-@media only screen and (min-width:600px){
-    #grid-container{
-        grid-template-columns:  1fr 3fr 1fr;
-    }
-    header{
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
+footer p{
+    color: rgb(23, 123, 23)
+}
+
+
+@media only screen and (min-width: 300px) {
     
+    #grid-container{
+        grid-template-columns:  1fr 2fr 2fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "header header header header" ". main main ." "footer footer footer footer";
+    }
+
+    html{
+        font-size: calc(1em + 1vw); 
+    }
+
+    header{
+        grid-area: header;
+        width: 100%;
+        float: right;
+    }
+
     main{
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
+        grid-area: main;
+        width: 100%;
+        float: right;
+    }
+
+    /*Nedenfor er koding for hver atikkel på index.html*/ 
+    .kampanje{
+        min-width: 500px;
+        max-width: 1400px;
+        min-height: 200px;
+    }
+
+    .barn{
+        min-width: 500px;
+        max-width: 1400px;
+        min-height: 200px;
+    }
+
+    .dame {
+        min-width: 500px;
+        max-width: 1400px;
+        min-height: 200px;
+    }
+
+    .herre {
+        min-width: 500px;
+        max-width: 1400px;
+        min-height: 200px;
+    }
+
+    .informasjon {
+        min-width: 500px;
+        max-width: 1400px;
+        min-height: 200px;
+    }
+
+
+    /*Koding for alle atikkel-modulene på produkt.html*/ 
+
+    #product-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 2rem;
+        
+    }
+    #product-box article{
+        align-items: center;
+        border: 3px solid rgb(23, 123, 23);
+        border-radius: 20px;
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    img{
+    max-width: 250px;
+    width: 100%;
+    }
+
+    /*Nedenfor er koding for seksjon på leveranse.html*/
+    .textbox{
+        max-width: 900px;
+        width: 100%;
+        height: 65%;
     }
     
     footer{
-        grid-column-start: 1;
-        grid-column: 4;
-        grid-row-start: 4;
-        grid-row-end: 5;
+    grid-area: footer;
+    width: 75%;
+    float: right;
     }
 }
 
-
-
-/*1. fjerne understrek og blåtekst på logo
-/*2. endre bildestørrelse
-*/
-
-/*Link til bilder brukt på forsiden
- <!--https://pixabay.com/no/photos/blomster-grener-t%C3%B8rke-t%C3%B8rket-3876195/-->
- <!--https://pixabay.com/no/photos/mennesker-sm%C3%A5gutter-parkere-barn-1560569/-->
- <!--https://pixabay.com/no/photos/jenter-benk-latter-ler-venner-1853958/-->
- <!--https://pixabay.com/no/photos/mann-modell-portrett-ansikt-7275449/-->
- */
