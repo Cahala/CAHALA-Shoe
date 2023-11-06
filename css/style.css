@@ -260,6 +260,57 @@ footer p{
     color: rgb(23, 123, 23)
 }
 
+/*oppsett for analyse.html*/
+#analyse {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 20px;
+}
+
+#analyse section {
+    margin-bottom: 3rem;
+}
+
+/*bilder på analyse.html*/
+#analyse img{
+    border-radius: 8px;
+    border: 3px solid rgb(23, 123, 23);
+    max-width: 45%;
+    height: auto;
+    margin-right: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+#tredjebilde {
+    margin-top: 0.5rem;
+    width: 50%;
+    margin-left: 11.5rem;
+
+
+}
+
+/*Tabell på analyse.html*/
+
+table {
+    border-collapse: collapse;
+    width: 85%;
+}
+
+table, th, td {
+    border: 3px solid rgb(23, 123, 23);
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+.multi-row {
+    text-orientation: mixed;
+    white-space: nowrap;
+}
+/*KILDE: brukt https://www.w3schools.com/css/css_table.asp og ChatGPT for å sette style til tabellen*/
+
 
 @media only screen and (min-width: 300px) {
     
@@ -310,6 +361,7 @@ footer p{
         width: 150%;
 
     }
+
     /*Koding for alle atikkel-modulene på produkt.html*/ 
 
     #forside-seksjoner{
