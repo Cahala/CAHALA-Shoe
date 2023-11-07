@@ -51,13 +51,6 @@ header{
 
 .navbar form i{
     color: white;
-    size: 3vw;
-
-}
-.navbar form input{
-    color: white;
-    size: 5vw;
-
 }
 
 /*PRODUKT.HTML, LEVERANSE.HTML og ANALYSE.HTML: overskrift*/
@@ -208,10 +201,7 @@ button {
     font-weight: bold;
 }
 
-img{
-    max-width: 155px;
-    width: 100%;
-}
+
 
 /*Koding for alle atikkel-modulene på produkt.html*/ 
 
@@ -236,6 +226,11 @@ img{
 #product-box article ul{
     padding: 1.5rem;
     border-radius: 20px;
+}
+
+#product-box article img{
+        max-width: 155px;
+        width: 100%;
 }
 
 /*Nedenfor er koding for seksjon på leveranse.html*/
@@ -273,44 +268,39 @@ footer p{
 #analyse {
     text-align: left;
     font-size: 3vw;
+    
 }
 
 #analyse section {
     margin-bottom: 3rem;
+    
+}
+
+#analyse section img {
+    border: 3px solid rgb(23, 123, 23);
+    border-radius: 8px;
+    width: 75%;
 }
 
 /*bilder på analyse.html*/
-#analyse img{
+#nokkelord img{
+    width: 100%;
     border-radius: 8px;
-    border: 3px solid rgb(23, 123, 23);
-    max-width: 45%;
-    height: auto;
+    border: 5px solid rgb(23, 123, 23);
     margin-right: 0.5rem;
     margin-bottom: 2rem;
 }
 
-#tredjebilde {
-    margin-top: 0.5rem;
-    width: 50%;
-    margin-left: 11.5rem;
-
-
-}
-
 /*Tabell på analyse.html*/
 
-table {
+table{
     border-collapse: collapse;
-    width: 85%;
+    font-size: 2vw;
 }
+
 
 table, th, td {
-    border: 3px solid rgb(23, 123, 23);
-}
-
-th, td {
-    padding: 8px;
-    text-align: left;
+    border: 5px solid rgb(23, 123, 23);
 }
 
 .multi-row {
@@ -395,7 +385,7 @@ th, td {
         padding: 0.5rem;
     }
 
-    img{
+    #product-box article img{
     max-width: 250px;
     width: 100%;
     }

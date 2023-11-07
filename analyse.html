@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="athor" contet="Camilla H. Larsen">
+        <meta name="author" content="Camilla H. Larsen">
         <meta name="description" content="CAHALA shoe - analyse av nettbutikken for å forbedre skobutikken til det beste for deg">
         <meta name="keywords" content="CAHALA Shoe, nettbutikk, skobutikk, kampanje, sko, sandaler, 
         tøfler, joggesko, sneakers, pensko, bunadsko, pumps, ballerina, tursko, overgangssko, vintersko,
@@ -23,21 +23,21 @@
     <body>
         <div id="grid-container">
             <header id="header">
-                <a href="#nokkelord" class="skip" alt="avsnitt om nøkkelord">Nøkkelord</a>
-                <a href="#for-utbedring" class="skip" alt="informasjon om resultater før utbedring">Resultat før utbedring</a>
-                <a href="#etter-utbedring" class="skip" alt="informasjon om resultater etter utbedring">Resultat etter utbedring</a>
-                <a href="#flex-bottom" class="skip" alt="gå til kontaktinformasjon">kontaktinformasjon</a>
+                <a href="#nokkelord" class="skip">Nøkkelord</a>
+                <a href="#for-utbedring" class="skip">Resultat før utbedring</a>
+                <a href="#etter-utbedring" class="skip">Resultat etter utbedring</a>
+                <a href="#flex-bottom" class="skip">kontaktinformasjon</a>
                 <!-- KILDE: brukt https://www.w3schools.com/accessibility/accessibility_skip_links.php-->
                 <div class="flex-container">
                     <h1><a href="index.html">CAHALA Shoe</a></h1>
                     <nav class="navbar">
-                        <a href="index.html"><i class="fa-solid fa-bars"></i> Meny</a>
-                        <a href="#"><i class="fa-solid fa-user"></i> Profil</a> 
-                        <a href="#"><i class="fa-solid fa-heart"></i> Favoritter</a> 
-                        <a href="#"><i class="fa-solid fa-cart-shopping"></i> Handlekurv</a> 
-                        <a href="analyse.html"><i class="fa-solid fa-chart-simple"></i> Analyse</a>
+                        <a href="index.html"><i class="fa-solid fa-bars" aria-label="gå til forsiden"></i> Meny</a>
+                        <a href="#"><i class="fa-solid fa-user" aria-label="gå til din profil"></i> Profil</a> 
+                        <a href="#"><i class="fa-solid fa-heart" aria-label="Se dine favoritter"></i> Favoritter</a> 
+                        <a href="#"><i class="fa-solid fa-cart-shopping" aria-label="Se varer lagt i handlekurven"></i> Handlekurv</a> 
+                        <a href="analyse.html"><i class="fa-solid fa-chart-simple" aria-label="analyse av nettsiden"></i> Analyse</a>
                         <form>
-                            <i class="fa-regular fa-magnifying-glass"></i>
+                            <i class="fa-regular fa-magnifying-glass" aria-label="søkefelt"></i>
                             <input type="search">
                         </form>
                           <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
@@ -292,7 +292,7 @@
                     <tr>
                         <th>Tema</th>
                         <th>Forside</th>
-                        <th>produkt</th>
+                        <th>Produkt</th>
                         <th>Leveranse</th>
                     </tr>
                     <tr>
@@ -589,25 +589,58 @@ for å sett inn tabellen ovenfor-->
                 <section id="etter-utbedring">
                     <h1>RESULTATER ETTER UTBEDRING</h1>
                     <p>Ut i fra analysene ble det poengtert flere forhold som burde sjekkes opp
-                        og det ble kommentert med anbefalinger for utbedring. Nedenfor er det listet 
+                        og det ble kommentert med anbefalinger for utbedringer. Nedenfor er det listet 
                         opp de forbedringene som er blitt gjort og hva som er blitt sjekket opp:
                     </p>
                     <ul>
-                        <li>Alle sidene: endret "title" til mer beskrivende og til å innholde nøkkelord</li>
-                        <li>Alle sidene: lagt til metabeskrivelser; keywords og description</li>
-                        <li>Forsiden: endret på HTML-struktur for knappene. Fjernet "article"
-                            som var satt rundt hver "button". Ettersom "button" ikke trenger 
-                            noe spesifikt foreldreelement.</li>
-                        <li>Alle sidene: sjekket over overskriftnivåene for å organisere informasjon 
-                            riktig hierarkisk</li>
-                        <li>Alle sidene: endret språkidentifiseringen fra lang="en" til "nb".
-                            Ettersom innholdet på siden er skrevet på norsk bokmål og ikke engelsk.
-                        </li>
+                        <li>Tittel: endret "title" til mer beskrivende og til å innholde nøkkelord på
+                            alle sidene.</li>
+                        <li>Metabeksrivelse: lagt til metabeskrivelser; keywords og description på alle
+                            sidene.</li>
+                        <li>JavaScript: fjernet all JavaScript-kode. Ettersom det med nettsidens struktur 
+                            ikke er laget for å ha med hamburgermeny i utgangspunktet. Det var heller 
+                            ikke et krav i utformingen, så jeg så ikke hensikten med å ha den funksjon med.</li>
+                        <li>Tekstliginnhold: lagt til mer tekst på forsiden.</li>
+                        <li>HTML-struktur: sjekket opp HTML-strukturen for knappene på forsiden.
+                            Etter å ha spurt ChatGPT om veiledning, ble jeg oppmerksom på at "button" ikke
+                            er avhenig av foreldreelement. Derfor fjernet "article"som var satt rundt 
+                            hver "button".</li>
+                        <li>Overskriftnivåer: sjekket over alle sidene på de punktene hvor analysen mente 
+                            det var overskriftnivåer uten overskriftelement. Ble ikke gjort endringer, 
+                            ettersom det er "p"-tagger med skrift og allerede en overskrift som har "h5"-tagg.</li>
+                        <li>Alternativ tekst til ikonene manglet: endret på hele navigasjonsmenyen,
+                            slik at ikonene henger sammen med teksten. Lagt til "aria-label" på alle stedene 
+                            det brukes ikoner.</li>
+                        <li>Responsivitet på design og tekst: gått over alle sidene i "style.css" og gjort 
+                            små justering for å få tekst, bilder og tabeller til å være mer responsive. Endret 
+                            blant annet alle font-size verdiene til "vw".</li>
+                        <li>Språkidentifiseringen: alle sidene sto med "html lang="en". Endret på alle sidnene
+                            til "nb" i stedenfor. Ettersom innholdet på siden er skrevet på norsk bokmål og 
+                            ikke engelsk.</li>
                     </ul>
                 </section>
 
                 <section>
-                    <p>Følgen er ikke blitt utbedret til tross for anbefalt ut i fra analysene:</p>
+                    <p>Her er en oversikt over ytterligere endringer som er gjort for å forbedre 
+                        nettsiden ut i fra SEO- og UU-perspektiv, med bakgrunn fra hva vi har lært og 
+                        hatt om i forlesning.</p>
+                    <ul>
+                        <li>Alle sidene: Satt inn "form" med "input" for å få et søkefelt i "header"</li>
+                        <li>Alle sidene: lagt inn "skip to content"</li>
+                        <li>Forsiden: endret på teksten til knappeboksene slik at det ikke bare står et ord,
+                            men at det skal lede kjøperen til å forstå at det er knapper og ikke bare en boks 
+                            med skrift. Ettersom kjøper på trykke på knappen for å komme til produktsidene.</li>
+                        <li>Produkt, leveranse og analyse: endret på den stistrukturen jeg hadde laget til en
+                            "breadcrumb"</li>
+                        <li>Endret på fargen på overskriftene på produkt-, leveranse og analysesiden
+                            fra sort til grønn. Slik at det er en helhet gjennom hele nettbutikken, og 
+                            det nå er ligt utseende med forsiden.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p>Nedenfor følger min begrunnelse for hvorfor utbedring ikke er blitt utført til 
+                        tross for anbefalinger om det fra analaysene:</p>
                     <dl>
                         <dt>ChatGPT: knapper er satt til å peke på"#".</dt>
                             <dd>- Det er ikke blitt utbedret fordi det pr. nå ikke er opprettet mer 
@@ -633,16 +666,14 @@ for å sett inn tabellen ovenfor-->
                             <dd>- Det har jeg sjekket opp og testet, finner ikke noe avvik ved det.</dd>
                     </dl>
                     <dl>
-                        <dt></dt>
-                            <dd>- </dd>
+                        <dt>ChatGPT: optimalisere onclick-hendelser.</dt>
+                            <dd>- Sjekket det opp og det gjelder knappen for forsiden hvor det er satt "#"
+                                fordi det pr. nå ikke er laget sider for barnesko, damesko og herresko.</dd>
                     </dl>
                     <dl>
-                        <dt></dt>
-                            <dd>- </dd>
-                    </dl>
-                    <dl>
-                        <dt></dt>
-                            <dd>- </dd>
+                        <dt>ChatGPT: anbefalte å sjekke skjermleservennligheten.</dt>
+                            <dd>- Det gjøres i neste steg under forbedring av nettsiden. Gå ned til skjermleserkompatibilitet <a href="#skjerm" class="skip">skjermleserkompatibilitet</a>
+                            for å lese utfyllende om resultatet etter utført test skjermleservennligheten for alle sidene.</dd>
                     </dl>
 <!--KILDE: brukt https://www.w3schools.com/html/html_lists.asp for å lage liste med innrykk-->
                 </section>
@@ -651,17 +682,17 @@ for å sett inn tabellen ovenfor-->
                     <h3>SEO og UU resultater etter utbedring</h3>
                 </section>
 
-                <section>
+                <section id="skjerm">
                     <h3>Skjermleserkompatibilitet</h3>
                 </section>
 
             </main>
             <footer id="flex-bottom">
-                <p class="insta"><i class="fa-brands fa-instagram" style="color: #177b17;"></i></p>
-                <p class="face"><i class="fa-brands fa-square-facebook" style="color: #177b17;"></i></p>
+                <p><i class="fa-brands fa-instagram" style="color: #177b17;" aria-label="skobutikkens instagram profil"></i></p>
+                <p><i class="fa-brands fa-square-facebook" style="color: #177b17;" aria-label="skobutikkens facebook side"></i></p>
                 <p class="contact">Kontakt oss</p>
-                <p class="mail"><i class="fa-solid fa-envelope" style="color: #177b17;"></i></p>
-                <p class="phone"><i class="fa-solid fa-phone" style="color: #177b17;"></i></p>
+                <p><i class="fa-solid fa-envelope" style="color: #177b17;" aria-label="skobutikkens epostadresse"></i></p>
+                <p><i class="fa-solid fa-phone" style="color: #177b17;" aria-label="skobutikkens telefonnummer"></i></p>
                 <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
                 <a href="#analyse" class="skip">Gå til toppen av siden</a>
             </footer>

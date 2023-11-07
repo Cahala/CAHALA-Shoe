@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="athor" contet="Camilla H. Larsen">
+        <meta name="author" content="Camilla H. Larsen">
         <meta name="description" content="her er alle våre kampanjer for høsten på sko - pensko, støvler, tursko, pumps etc.">
         <meta name="keywords" content="CAHALA Shoe, nettbutikk, skobutikk, kampanje, sko, sandaler, 
         tøfler, joggesko, sneakers, pensko, bunadsko, pumps, ballerina, tursko, overgangssko, vintersko,
@@ -23,18 +23,18 @@
     <body class="produkt">
         <div id="grid-container">
             <header id="header">
-                <a href="#flex-bottom" class="skip" alt="gå til kontaktinformasjon">kontaktinformasjon</a>
+                <a href="#flex-bottom" class="skip">kontaktinformasjon</a>
                 <!-- KILDE: brukt https://www.w3schools.com/accessibility/accessibility_skip_links.php-->
                 <div class="flex-container">
                     <h1><a href="index.html">CAHALA Shoe</a></h1>
                     <nav class="navbar">
-                        <a href="index.html"><i class="fa-solid fa-bars"></i> Meny</a>
-                        <a href="#"><i class="fa-solid fa-user"></i> Profil</a> 
-                        <a href="#"><i class="fa-solid fa-heart"></i> Favoritter</a> 
-                        <a href="#"><i class="fa-solid fa-cart-shopping"></i> Handlekurv</a> 
-                        <a href="analyse.html"><i class="fa-solid fa-chart-simple"></i> Analyse</a>
+                        <a href="index.html"><i class="fa-solid fa-bars" aria-label="gå til forsiden"></i> Meny</a>
+                        <a href="#"><i class="fa-solid fa-user" aria-label="gå til din profil"></i> Profil</a> 
+                        <a href="#"><i class="fa-solid fa-heart" aria-label="Se dine favoritter"></i> Favoritter</a> 
+                        <a href="#"><i class="fa-solid fa-cart-shopping" aria-label="Se varer lagt i handlekurven"></i> Handlekurv</a> 
+                        <a href="analyse.html"><i class="fa-solid fa-chart-simple" aria-label="analyse av nettsiden"></i> Analyse</a>
                         <form>
-                            <i class="fa-regular fa-magnifying-glass"></i>
+                            <i class="fa-regular fa-magnifying-glass" aria-label="søkefelt"></i>
                             <input type="search">
                         </form>
                           <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
@@ -126,12 +126,12 @@
                     </article>
                 </section>
             </main>
-            <footer class="flex-bottom">
-                <p class="insta"><i class="fa-brands fa-instagram" style="color: #177b17;"></i></p>
-                <p class="face"><i class="fa-brands fa-square-facebook" style="color: #177b17;"></i></p>
+            <footer id="flex-bottom">
+                <p><i class="fa-brands fa-instagram" style="color: #177b17;" aria-label="skobutikkens instagram profil"></i></p>
+                <p><i class="fa-brands fa-square-facebook" style="color: #177b17;" aria-label="skobutikkens facebook side"></i></p>
                 <p class="contact">Kontakt oss</p>
-                <p class="mail"><i class="fa-solid fa-envelope" style="color: #177b17;"></i></p>
-                <p class="phone"><i class="fa-solid fa-phone" style="color: #177b17;"></i></p>
+                <p><i class="fa-solid fa-envelope" style="color: #177b17;" aria-label="skobutikkens epostadresse"></i></p>
+                <p><i class="fa-solid fa-phone" style="color: #177b17;" aria-label="skobutikkens telefonnummer"></i></p>
                 <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
                 <a href="#main" class="skip">Gå til toppen av siden</a>
             </footer>
