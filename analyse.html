@@ -3,9 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="athor" contet="Camilla H. Larsen">
+        <meta name="description" content="CAHALA shoe - analyse av nettbutikken for å forbedre skobutikken til det beste for deg">
         <meta name="keywords" content="CAHALA Shoe, nettbutikk, skobutikk, kampanje, sko, sandaler, 
         tøfler, joggesko, sneakers, pensko, bunadsko, pumps, ballerina, tursko, overgangssko, vintersko,
         gummistøvler, boots, støvletter, støvler, sommer, vinter, høst, vår, damesko, barnesko, herresko">
+        <meta property="og:title" content="CAHALA Shoe - sko til høsten på kampanje hele familien">
+        <meta property="og:url" content="https://schema.org/AggregateRating">
+        <meta property="og:description" content="Stort utvalg av barnesko, damesko og herresko på kampanje">
+        <meta property="og:image" content="https://pixabay.com/photos/seo-sem-marketing-optimization-web-758264/">
+        <!--KILDER: koding for Open Graph-metatagger er hentet eksempelet fra forlesning om metadata-->
+        <!--KILDER: bildet hentet fra pixabay.com-->
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="stylesheet" href="css/fontawesome/css/fontawesome.css">
         <link rel="stylesheet" href="css/fontawesome/css/brands.css">
@@ -15,30 +23,37 @@
     <body>
         <div id="grid-container">
             <header id="header">
+                <a href="#nokkelord" class="skip" alt="avsnitt om nøkkelord">Nøkkelord</a>
+                <a href="#for-utbedring" class="skip" alt="informasjon om resultater før utbedring">Resultat før utbedring</a>
+                <a href="#etter-utbedring" class="skip" alt="informasjon om resultater etter utbedring">Resultat etter utbedring</a>
+                <a href="#flex-bottom" class="skip" alt="gå til kontaktinformasjon">kontaktinformasjon</a>
+                <!-- KILDE: brukt https://www.w3schools.com/accessibility/accessibility_skip_links.php-->
                 <div class="flex-container">
-                    <nav>
-                        <h1><a href="index.html">CAHALA Shoe</a></h1>
-                        <i id="ham" class="fa-solid fa-bars" style="color: #ffffff;"></i>
-                        <i id="user" class="fa-solid fa-user" style="color: #ffffff;"></i>
-                        <i id="heart" class="fa-solid fa-heart" style="color: #ffffff;"></i>
-                        <i id="shopping" class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        <i id="search" class="fa-regular fa-magnifying-glass" style="color: #ffffff;"></i>
-                        <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
-                        <ul class="navbar">
-                            <li><a href="index.html">Meny</a></li>
-                            <li><a href="#">Profil</a></li>
-                            <li><a href="#">Favoritter</a></li>
-                            <li><a href="#">Handlekurv</a></li>
-                            <li><a href="#">Søk</a></li>
-                            <li><a href="analyse.html">Analyse</a></li>
-                        </ul>
+                    <h1><a href="index.html">CAHALA Shoe</a></h1>
+                    <nav class="navbar">
+                        <a href="index.html"><i class="fa-solid fa-bars"></i> Meny</a>
+                        <a href="#"><i class="fa-solid fa-user"></i> Profil</a> 
+                        <a href="#"><i class="fa-solid fa-heart"></i> Favoritter</a> 
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i> Handlekurv</a> 
+                        <a href="analyse.html"><i class="fa-solid fa-chart-simple"></i> Analyse</a>
+                        <form>
+                            <i class="fa-regular fa-magnifying-glass"></i>
+                            <input type="search">
+                        </form>
+                          <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
                     </nav>
                 </div>
             </header>
             <main id="analyse">
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Forside</a></li>
+                    <li><a href="analyse.html">Analyse</a></li>
+                </ul>
+                <!--KILDE: brukt https://www.w3schools.com/howto/howto_css_breadcrumbs.asp for å lage
+                breadcrumbs i steden for den stistrukturen jeg opprinnelig hadde laget-->
                 <h1>ANALYSE AV NETTSIDEN</h1>
 <!--CSS: flytte overskriften litt ned-->
-                <section>
+                <section id="nokkelord">
                     <h2>NØKKELORD</h2>
                     <p>For å komme frem til ulike nøkkelord tenkte jeg igjennom hvilke ord som er 
                         unik å ha med for en skobutikk generelt og så ut ifra målgruppen for nettsiden.
@@ -88,6 +103,9 @@
 <!--CSS: gjøre bildene større-->
                 </section>
 
+                <section id="for-utbedring">
+                    <h1>RESULTATER FØR UTBEDRING</h1>
+                </section>
                 <article>
                     <h2>LIGHTHOUSE</h2>
                     <p>Nedenfor vises resultater etter gjennomført analyse via Lighthouse for 
@@ -263,24 +281,6 @@
                         <td>At det er inkludert ikoner for sosiale medier og kontaktinformasjon
                             i footer er positivt for brukerengasjement. </td><!--Leveranse-->
                     </tr>
-                    <tr>
-                        <th>Generelt</th><!--Tema-->
-                        <td>For å forbedre SEO ytterligere bør du vurdere å inkludere mer 
-                            tekstlig innhold på siden, optimalisere URL-strukturen og sørge for 
-                            at alle sider er unike, beskrivende tittel- og metabeskrivelser.
-                            Å forbedre brukeropplevelsen og tilby verdifult innhold er også viktig
-                            for SEO-suksess.</td><!--Forside-->
-                        <td>For ytterligere forbedring i SEO kan du inkludere flere detaljer og
-                            beskrivelser i tekstinnhold, optimalisere URL-strukturen og tittelen
-                            for å fokusere på relevante søkeord, samt sikre nettstedet å fungere
-                            optimalt på ulike enheter. SEO er en kontinuerlig prosess, så å holde
-                            seg oppdatert med de nyeste best praksis kan være avgjørende.</td><!--Produkt-->
-                        <td>For å forbedre SEO kan du vurdere å inkludere mer detaljer og 
-                            spesifikk informasjon, optimalisere URL-strukturen og tittelen for
-                            relevante nøkkelord, samt sikrte at nettstedet fungerer optimalt på ulike
-                            enheter og nettlesere. Sørg for å følge best praksis for 
-                            søkermotoroptimalisering for å sikre bedre synlighet i søkeresultater.</td><!--Leveranse-->
-                    </tr>
                 </table>
 
                 <article>
@@ -420,85 +420,235 @@
                             html lang="en", er det viktig å være konsistent i språkbruken på hele 
                             nettstedet for å hjelpe skjermlesere og andre språkstøttende teknologier.</td><!--Leveranse-->
                     </tr>
-                    <tr>
-                        <th>Generelt</th><!--Tema-->
-                        <td>Det er viktig å utføre testing med ulike verktøy og tilnærminger for 
-                            universell utforming for å sikre at nettstedet er så tilgjengelig som 
-                            mulig for alle brukere.</td><!--Forside-->
-                        <td>Det er viktig å teste nettstedet med forskjellige tilgjengelighetsverktøy, 
-                            som skjermlesere, kontrastkontroller og tastaturnavigasjon for å 
-                            identifisere og rette opp i tilgjengelighetsproblemer.For en bedre 
-                            tilgjengelighet, bør du vurdere å implementere de foreslåtte forbedringene 
-                            og sjekke nøye at nettstedet er tilgjengelig for alle brukere, uavhengig 
-                            av eventuelle funksjonshemminger de måtte ha.</td><!--Produkt-->
-                        <td>For å forbedre tilgjengeligheten ytterligere, bør du utføre testing 
-                            med bruk av verktøy for tilgjengelighet og gjerne også med reelle brukere 
-                            som representerer ulike funksjonshemminger. Dette vil bidra til å 
-                            identifisere og rette opp eventuelle tilgjengelighetsproblemer på 
-                            nettstedet.</td><!--Leveranse-->
-                    </tr>
                 </table>
 
                 <section>
-                    <h3>Sammenligning av resultater fra analyse før forbedring</h3>
+                    <h3>Sammenligning av resultatene</h3>
                     <table>
+                        <caption>I tabellen nedenfor vises resultatene fra SEO-analyse med anbefalinger
+                            om forbedring.</caption>
                         <tr>
                             <th>Analyse</th>
+                            <th>Resultat</th>
+                            <th>Lighthouse</th>
+                            <th>ChatGPT</th>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="5" class="multi-row">SEO</td>
+                            <td>Tittel og struktur</td><!--Resultat-->
+                            <td>Sidene har ikke metabeskrivelse</td><!--Lighthouse-->
+                            <td>Tittelen er kort. Brø bedre tittel-og metabeskrivelse. Bør inkludere 
+                                flere søkeord</td><!--ChatGPT-->
+                        </tr>
+                        <tr>
+                            <td>Responsivt design og brukervennlighet</td><!--Resultat-->
+                            <td>Ingen bemerkelse</td><!--Lighthouse-->
+                            <td>Ikonene bør implementeres</td><!--ChatGPT-->
+                        </tr>
+                        <tr>
+                            <td>URL-struktur</td><!--Resultat-->
+                            <td>Ingen bemerkelse</td><!--Lighthouse-->
+                            <td>URL-strukturen ser ikke ut til å være direkte implementert. 
+                                Knapper er satt til å peke på "#" eller bestemte sider som 
+                                "produkt.html" og "leveranse.html"</td><!--ChatGPT-->
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td><!--Resultat-->
+                            <td>Ingen bemerkelse</td><!--Lighthouse-->
+                            <td>Sørg for at navigasjonsmenyen fungere tilfredsstillende for brukere 
+                                uten JavaScript, da søkermotorer som Google kan ha problemer med å 
+                                indeksere innhold som er avhengig av JavaScript</td><!--ChatGPT-->
+                        </tr>
+                        <tr>
+                            <td>Tekstliginnhold</td><!--Resultat-->
+                            <td>Ingen bemerkelse</td><!--Lighthouse-->
+                            <td>Forsiden: bemerkelse på å mangle tekstliginnhold.<br>
+                                Leveranse: kan være fordelaktig å inkludere enda mer spesifikt 
+                                informasjon om forsendelse, betaling og retur for å gi et mer 
+                                detaljert bilde av tjenestene</td><!--ChatGPT-->
+                        </tr>
+                    </table>
+                    <table>
+                        <caption>I tabellen nedenfor vises resultatene fra UU-analyse med anbefalinger
+                            om forbedring.</caption>
+                        <tr>
+                            <th>Analyse</th>
+                            <th>Resultat</th>
                             <th>Lighthouse</th>
                             <th>ChatGPT</th>
                             <th>Webaim</th>
                         </tr>
+<!--CSS: gjøre endringer på mellomrom mellom tabellene-->
+<!--CSS: gjøre endringer på width på tabellene-->
                         <tr>
-                            <td rowspan="3" class="multi-row">SEO</td>
-                            <td>Document does not have a meta descripton</td>
-                            <td>22. januar</td>
+                            <td rowspan="12" class="multi-row">UU</td>
+                            <td>Semantisk HTML</td><!--Resultat-->
+                            <td>Leveranse/informasjonsiden: har overskriftselementet som ikke er i 
+                                en sekvensielt synkende rekkefølge.</td><!--Lighthouse-->
+                            <td>Mangler semantisk betydning for enkelte av elementene, for eksempel 
+                                bruk av "article" for knapper, som kanskje burde vært "div" eller 
+                                andre semantiske elementer, og bruk av riktige overskriftsnivåer 
+                                for å organisere informasjonen hierarkisk.</td><!--ChatGPT-->
+                            <td>Flere steder hvor det er en overskrift, men at det ikke er et 
+                                overskriftelement, og et overskriftsnivå hoppet over.</td><!--Webaim-->
                         </tr>
                         <tr>
-                            <td>Element 2</td>
-                            <td>25. januar</td>
-                            <td></td>
+                            <td>URL-struktur</td><!--Resultat-->
+                            <td>Ingen bemerkelse</td><!--Lighthouse-->
+                            <td>Ingen bemerkelse</td><!--ChatGPT-->
+                            <td>Produktsiden: på navigasjonselemente "meny" er det en overflødig lenke, 
+                                og tilstøtende lenker går til samme URL</td><!--Webaim-->
                         </tr>
                         <tr>
-                            <td>Element 3</td>
-                            <td>30. januar</td>
-                            <td>...</td>
+                            <td>Tilgjenglighet</td><!--Resultat-->
+                            <td>Ingen bemerkelse</td><!--Lighthouse-->
+                            <td>Noen av knappene har onclick-hendelser uten tilstrekkelig alternativ 
+                                for tastaturnavigasjon eller skjermlesere. Elementer som vises etter 
+                                å ha klikket på hamburger-ikonet er visuelt skjulte som standard</td><!--ChatGPT-->
+                            <td>Ingen bemerkelse</td><!--Webaim-->
                         </tr>
                         <tr>
-                            <td rowspan="3" class="multi-row">UU</td>
-                            <td>Element 1</td>
-                            <td>22. januar</td>
+                            <td>Navigasjon</td><!--Resultat-->
+                            <td>Ingen bemerkelse</td><!--Lighthouse-->
+                            <td>Lenker som "Meny", "Profil", "Favoritter", etc., kan forbedres ved 
+                                å inkludere mer beskrivende tekst i tillegg til ikonene</td><!--ChatGPT-->
+                            <td>Ingen bemerkelse</td><!--Webaim-->
                         </tr>
                         <tr>
-                            <td>Element 2</td>
-                            <td>25. januar</td>
-                            <td>...</td>
-                        
+                            <td>Farge og kontrast</td><!--Resultat-->
+                            <td>Ingen bemerkelse</td><!--Lighthouse-->
+                            <td>Sjekk kontrastforholdet mellom tekst og bakgrunn</td><!--ChatGPT-->
+                            <td>Ingen bemerkelse</td><!--Webaim-->
                         </tr>
                         <tr>
-                            <td>Element 3</td>
-                            <td>30. januar</td>
-                            <td>...</td>
+                            <td>Responsivitet</td><!--Resultat-->
+                            <td>Ingen bemerkelse</td><!--Lighthouse-->
+                            <td>Sjekk at nettstedet er responsivt og fungerer godt på ulike enhetene</td><!--ChatGPT-->
+                            <td>Ingen bemerkelse</td><!--Webaim-->
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td><!--Resultat-->
+                            <td>Ingen bemerkelse</td><!--Lighthouse-->
+                            <td>Unngå å bruke skjult tekst eller skjulte navigasjonselementer som 
+                                bare vises ved bruk av CSS eller JavaScript</td><!--ChatGPT-->
+                            <td>Ingen bemerkelse</td><!--Webaim-->
+                        </tr>
+                        <tr>
+                            <td>Alternativ tekst for ikoner</td><!--Resultat-->
+                            <td>Ingen bemerkelse</td><!--Lighthouse-->
+                            <td>Det mangler tekstbaserte beskrivelser (alt-tekst) for ikonene</td><!--ChatGPT-->
+                            <td>Ingen bemerkelse</td>
+                        </tr>
+                        <tr>
+                            <td>Skjermleservennlighet</td><!--Resultat-->
+                            <td>Ingen bemerkelse</td><!--Lighthouse-->
+                            <td>Gjennomgå koden for å sikre at skjermlesere kan tolke innholdet</td><!--ChatGPT-->
+                            <td>Ingen bemerkelse</td><!--Webaim-->
+                        </tr>
+                        <tr>
+                            <td>Skriftstørrelsejustering</td><!--Resultat-->
+                            <td>Ingen bemerkelse</td><!--Lighthouse-->
+                            <td>Produktsiden: teksten kan være for liten for enkelte brukere</td><!--ChatGPT-->
+                            <td>Ingen bemerkelse</td><!--Webaim-->
+                        </tr>
+                        <tr>
+                            <td>Tastaturnavigasjon</td><!--Resultat-->
+                            <td>Ingen bemerkelse</td><!--Lighthouse-->
+                            <td>Produktsiden: det ser ikke ut til å være tastaturvennlig 
+                                navigasjon for personer som ikke bruker mus eller berøringsskjerm</td><!--ChatGPT-->
+                            <td>Ingen bemerkelse</td><!--Webaim-->
+                        </tr>
+                        <tr>
+                            <td>Språkidentifisering</td><!--Resultat-->
+                            <td>Ingen bemerkelse</td><!--Lighthouse-->
+                            <td>HTML-avsnittet angir engelsk som språket "en"-attributt i 
+                                html lang="en", det viktig å være konsistent i språkbruken på 
+                                hele nettstedet</td><!--ChatGPT-->
+                            <td>Ingen bemerkelse</td><!--Webaim-->
                         </tr>
                     </table>
-                    <p>Ut i fra sammenligning i tabellen ovenfor med resultater fra analyse av 
-                        alle tre siden, er det ChatGPT som kommer med flest forslag til 
-                        forbedring innen for både SEO og UU. Forbedringsforslagene fra 
-                        ChatGPT er dypere og mer spesifikke, samt at det kommentert på flere
-                        ting som ikke Lighthouse eller Webaim har gitt utslag på. 
-                        Som kontrast, tastaturnavigasjon, skriftstørrelsejustering etc. <!--Her skal jeg skrive sammenligning av resultatene 
-                    "Er det noen ting som lighthouse reagerer på som ikke blir nevnt av chatGPT osv."--></p>
+                    <p>Etter å ha sammenligninget resultatene ser jeg at ChatGPT har reagert på 
+                        flere ting som ikke Lighthous påengterte ut i fra SEO-perspektiv. 
+                        Blant annet ikoner,URL'er og JavaScript ikke er optimalt implementert. 
+                        I tillegg reagerte ChatGPT på at det var lite tekstliginnhold, noe Lighthouse 
+                        ikke ga noe bemerkelse på.
+                    </p>
+                    <p>
+                        Ut ifra et UU-perspektiv var det også der flere til ChatGPT reagerte på som 
+                        ikke Lighthouse og Webaim ga utslag på. Blant annet det samme som ved 
+                        SEO-analysen med ikoner, JavaScript og URL-struktur som ikke er optimalt 
+                        implementert, men også at det manglet alternativ tekst til ikonene,
+                        tekststørrelsen kan være for liten, språkidentifiseringen som var satt til
+                        engelsk, men innholdet er skrevet på norsk bokmål og tastaturnavigasjon som
+                        så ut til å mangle på en av sidene.
+                    </p>
 <!--KILDE: bruke https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro og ChatGPT 
-    for å sett inn tabellen ovenfor-->
+for å sett inn tabellen ovenfor-->
                 </section>
-                <section>
-                    <p>Tiltak gjort for å forbedre siden</p>
+                <section id="etter-utbedring">
+                    <h1>RESULTATER ETTER UTBEDRING</h1>
+                    <p>Ut i fra analysene ble det poengtert flere forhold som burde sjekkes opp
+                        og det ble kommentert med anbefalinger for utbedring. Nedenfor er det listet 
+                        opp de forbedringene som er blitt gjort og hva som er blitt sjekket opp:
+                    </p>
                     <ul>
-                        <li>..</li>
-                        <li>..</li>
-                        <li>..</li>
-                        <li>..</li>
-                        <li>..</li>
+                        <li>Alle sidene: endret "title" til mer beskrivende og til å innholde nøkkelord</li>
+                        <li>Alle sidene: lagt til metabeskrivelser; keywords og description</li>
+                        <li>Forsiden: endret på HTML-struktur for knappene. Fjernet "article"
+                            som var satt rundt hver "button". Ettersom "button" ikke trenger 
+                            noe spesifikt foreldreelement.</li>
+                        <li>Alle sidene: sjekket over overskriftnivåene for å organisere informasjon 
+                            riktig hierarkisk</li>
+                        <li>Alle sidene: endret språkidentifiseringen fra lang="en" til "nb".
+                            Ettersom innholdet på siden er skrevet på norsk bokmål og ikke engelsk.
+                        </li>
                     </ul>
+                </section>
+
+                <section>
+                    <p>Følgen er ikke blitt utbedret til tross for anbefalt ut i fra analysene:</p>
+                    <dl>
+                        <dt>ChatGPT: knapper er satt til å peke på"#".</dt>
+                            <dd>- Det er ikke blitt utbedret fordi det pr. nå ikke er opprettet mer 
+                                en tre sider, for å ha en fullverdig visuelt sett navigasjonsmeny 
+                                å fremvisninge er det bare fektivtt linket til "#" enn så lenge. 
+                                Noe som ikke kan utbedres før alle sidene er opprettet.
+                            </dd>
+                    </dl>
+                    <dl>
+                        <dt>ChatGPT: inkludere enda mer spesifikt informasjon om forsendelse, 
+                            betaling og retur på leveranse/informasjonssiden</dt>
+                            <dd>- Det er allereder med, bare ikke optimalt utført pr. nå.</dd>
+                    </dl>
+                    <dl>
+                        <dt>ChatGPT: anbefalte å sjekke farge og kontrastforholdet.</dt>
+                            <dd>- Det er blitt gjort med Lighthouse og Webaim. Ingen av de to ga 
+                                noe varslinger på at det burde utbedres, derav er det ikke gjort 
+                                noen endringer med tanke på det.</dd>
+                    </dl>
+                    <dl>
+                        <dt>ChatGPT: mente produktsiden så ut til å ikke ha tastaturvennlig 
+                            navigasjon</dt>
+                            <dd>- Det har jeg sjekket opp og testet, finner ikke noe avvik ved det.</dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                            <dd>- </dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                            <dd>- </dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                            <dd>- </dd>
+                    </dl>
+<!--KILDE: brukt https://www.w3schools.com/html/html_lists.asp for å lage liste med innrykk-->
+                </section>
+
+                <section>
+                    <h3>SEO og UU resultater etter utbedring</h3>
                 </section>
 
                 <section>
@@ -506,13 +656,14 @@
                 </section>
 
             </main>
-            <footer class="flex-bottom">
+            <footer id="flex-bottom">
                 <p class="insta"><i class="fa-brands fa-instagram" style="color: #177b17;"></i></p>
                 <p class="face"><i class="fa-brands fa-square-facebook" style="color: #177b17;"></i></p>
                 <p class="contact">Kontakt oss</p>
                 <p class="mail"><i class="fa-solid fa-envelope" style="color: #177b17;"></i></p>
                 <p class="phone"><i class="fa-solid fa-phone" style="color: #177b17;"></i></p>
                 <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
+                <a href="#analyse" class="skip">Gå til toppen av siden</a>
             </footer>
         </div>
     </body>

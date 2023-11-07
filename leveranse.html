@@ -3,9 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="athor" contet="Camilla H. Larsen">
+        <meta name="description" content="all informasjon du trenger for betaling, levering og retur fra vår skobutikk">
         <meta name="keywords" content="CAHALA Shoe, nettbutikk, skobutikk, kampanje, sko, sandaler, 
         tøfler, joggesko, sneakers, pensko, bunadsko, pumps, ballerina, tursko, overgangssko, vintersko,
         gummistøvler, boots, støvletter, støvler, sommer, vinter, høst, vår, damesko, barnesko, herresko">
+        <meta property="og:title" content="CAHALA Shoe - leveranse av sko fra vår nettbutikk">
+        <meta property="og:url" content="https://schema.org/AggregateRating">
+        <meta property="og:description" content="all informasjon du trenger om levering, betaling og retur av sko fra vår nettbutikk">
+        <meta property="og:image" content="https://pixabay.com/photos/fact-truth-information-evidence-6577794/">
+        <!--KILDER: koding for Open Graph-metatagger er hentet eksempelet fra forlesning om metadata-->
+        <!--KILDER: bildet hentet fra pixabay.com/ -->
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="stylesheet" href="css/fontawesome/css/fontawesome.css">
         <link rel="stylesheet" href="css/fontawesome/css/brands.css">
@@ -15,31 +23,32 @@
     <body class="leveranse">
         <div id="grid-container">
             <header id="header">
+                <a href="#flex-bottom" class="skip" alt="gå til kontaktinformasjon">kontaktinformasjon</a>
+                <!-- KILDE: brukt https://www.w3schools.com/accessibility/accessibility_skip_links.php-->
                 <div class="flex-container">
-                    <nav>
-                        <h1><a href="index.html">CAHALA Shoe</a></h1>
-                        <i id="ham" class="fa-solid fa-bars" style="color: #ffffff;"></i>
-                        <i id="user" class="fa-solid fa-user" style="color: #ffffff;"></i>
-                        <i id="heart" class="fa-solid fa-heart" style="color: #ffffff;"></i>
-                        <i id="shopping" class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        <i id="search" class="fa-regular fa-magnifying-glass" style="color: #ffffff;"></i>
-                        <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
-                        <ul class="navbar">
-                            <li><a href="index.html">Meny</a></li>
-                            <li><a href="#">Profil</a></li>
-                            <li><a href="#">Favoritter</a></li>
-                            <li><a href="#">Handlekurv</a></li>
-                            <li><a href="#">Søk</a></li>
-                            <li><a href="analyse.html">Analyse</a></li>
-                        </ul>
+                    <h1><a href="index.html">CAHALA Shoe</a></h1>
+                    <nav class="navbar">
+                        <a href="index.html"><i class="fa-solid fa-bars"></i> Meny</a>
+                        <a href="#"><i class="fa-solid fa-user"></i> Profil</a> 
+                        <a href="#"><i class="fa-solid fa-heart"></i> Favoritter</a> 
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i> Handlekurv</a> 
+                        <a href="analyse.html"><i class="fa-solid fa-chart-simple"></i> Analyse</a>
+                        <form>
+                            <i class="fa-regular fa-magnifying-glass"></i>
+                            <input type="search">
+                        </form>
+                          <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
                     </nav>
                 </div>
             </header>
             <main id="leveranse">
-                <section class="stilstruktur">
-                    <p><a href="index.html">forsiden </a><a href="leveranse.html">&#8594; informasjon</a></p>
-                </section>
-                <!--KILDE: hentet informasjon om å sette inn pil fra denne siden https://www.thoughtco.com/arrow-symbols-on-web-page-3466516-->
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Forside</a></li>
+                    <li><a href="leveranse.html">Leveranse</a></li>
+                </ul>
+                <!--KILDE: brukt https://www.w3schools.com/howto/howto_css_breadcrumbs.asp for å lage
+                breadcrumbs i steden for den stistrukturen jeg opprinnelig hadde laget-->
+
                     <h1>LEVERANSE</h1>
                     <h5>Betaling</h5>
                     <h5>Leveranse</h5>
@@ -65,19 +74,8 @@
                 <p class="mail"><i class="fa-solid fa-envelope" style="color: #177b17;"></i></p>
                 <p class="phone"><i class="fa-solid fa-phone" style="color: #177b17;"></i></p>
                 <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
+                <a href="#leveranse" class="skip">Gå til toppen av siden</a>
             </footer>
         </div>
-        <script>
-            let x = document.querySelector(".navbar")
-            document.getElementById("ham").addEventListener("click", (e) => {
-
-                if (x.className === "navbar") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "navbar"
-                }
-            })
-            //KILDE: det som står i script er hentet fra forelesning 16.oktober 2023.
-        </script>
     </body>
 </html>

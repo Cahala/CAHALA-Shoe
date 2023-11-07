@@ -13,121 +13,117 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(255, 255, 255);
-    align-items: center;
     margin: 0;
 }
 
+
+header, main, footer{
+    padding: 1rem;
+}
+
+/*PRODUKT.HTML, LEVERANSE.HTML og ANALYSE.HTML: bedriftnavn i header*/
 header{
-    grid-area: header;
     background-color: rgb(32, 123, 32);
-    color: rgb(255, 255, 255);
     text-align: center;
+    font-size: 3vw;
+    grid-area: header;
 }
 
-header nav ul{
-    list-style: none;
-}
-
-header ul li a{
-    color: rgb(255, 255, 255);
-    justify-content: space-between;
+/*Header for produkt.html, leveranse.html og analyse.html*/
+.flex-container h1 a{
     text-decoration: none;
-}
- 
-header nav h1 a{
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    text-align: center;
+    color: white;
 }
 
-/*Ikoner i head-delen*/
-.flex-container{
-    align-items: flex-start;
-    justify-content:left;
-    gap: 5%;
-    padding:25px;
-}
-
-/*Header for produkt.html og leveranse.html*/
-#header nav ul li a{
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content:left;
-}
-
+/*Navigering i header for alle sidene; meny, profil, favoritter etc...*/
 .navbar{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-.navbar li a{
-    font-size: 4vw;
+.navbar a{
+    color: white;
+    font-size: 3vw;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-/*
-.responsive {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: #242424;
-    margin: 0;
-    padding: 0;
-    top: 40px;
-    width: 100%;
-    list-style: none;
-}
-
-.responsive a {
-    color: #fff;
-    display: inline-block;
-    padding: 1rem;
-    text-decoration: none;
-}
-*/
-
-/*Navigering stistruktur for produkt.html og leveranse.html*/
-.stilstruktur p{
-    text-align: left;
-    padding: 0.5rem;
-}
-
-.filter{
-    text-align: right;
-}
-
-/*Overskrift på leveranse.html*/
-#leveranse h1{
-    text-align: center;
 
 }
 
-/*Undertittel på leveranse.html*/
-#leveranse h5{
-    display: inline-block;
-    vertical-align: baseline;
-    justify-content: center;
-    padding-left: 0.5rem;
-    padding-right: 1rem;
-    margin: 0;
+.navbar form i{
+    color: white;
+    size: 3vw;
+
+}
+.navbar form input{
+    color: white;
+    size: 5vw;
+
 }
 
-/*Overskrift for index.html*/
+/*PRODUKT.HTML, LEVERANSE.HTML og ANALYSE.HTML: overskrift*/
 main h1{
     grid-area: main;
     padding: 10px;
     margin-bottom: 5%;
     text-align: center;
+    font-size: 6vw;
+    color:rgb(23, 123, 23);
 }
 
-/*Overskrift for index.html*/
+/*INDEX.HTML: overskrift*/
 main h1 a{
     text-decoration: none;
     color:rgb(23, 123, 23);
-    font-size: calc(1em + 1vw); 
+    font-size: 6vw; 
+}
+
+main p{
+    font-size: 3vw;
+    text-align: left;
+}
+
+/*Navigering breadcrumb for produkt.html, leveranse.html og analyse.html*/
+.breadcrumb {
+    list-style: none;
+}
+.breadcrumb li {
+    display: inline;
+    font-size: 2.5vw;
+}
+
+.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+.breadcrumb li a {
+    color: black;
+    text-decoration: none;
+    text-align: left;
+}
+.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+/*KILDE: brukt https://www.w3schools.com/howto/howto_css_breadcrumbs.asp*/
+
+/*PRODUKT.HTML: justering av posjon for tekst "filtrer" */
+.filter p{
+    text-align: right;
+    font-size: 2.5vw;
+}
+
+/*LEVERANSE.HTML: undertittel*/
+#leveranse{
+    text-align: center;
+}
+
+/*LEVERANSE.HTML: undertittel*/
+#leveranse h5{
+    display: inline-block;
+    padding-right: 1rem;
+    margin: 0;
+    font-size: 2vw;
 }
 
 /*INDEX.HTML: Seksjoner med artikler som er knapper for ulike tema; kampanje, barn, dame, herre og informasjon*/
@@ -155,7 +151,7 @@ button {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
-    font-size: calc(1em + 1vw); 
+    font-size: 3vw; 
     font-weight: bold;
 }
 
@@ -169,7 +165,7 @@ button {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
-    font-size: calc(1em + 1vw); 
+    font-size: 3vw;
     font-weight: bold;
 }
 
@@ -183,7 +179,7 @@ button {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
-    font-size: calc(1em + 1vw); 
+    font-size: 3vw;
     font-weight: bold;
 }
 
@@ -197,7 +193,7 @@ button {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
-    font-size: 130%;
+    font-size: 3vw;
     font-weight: bold;
 }
 
@@ -208,7 +204,7 @@ button {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
-    font-size: calc(1em + 1vw); 
+    font-size: 3vw;
     font-weight: bold;
 }
 
@@ -231,40 +227,52 @@ img{
     align-items: center;
     flex-wrap: wrap;
     border: 3px solid rgb(23, 123, 23);
-    border-radius: 20px;
+
     margin: 0.5rem;
     padding: 0.5rem;
-    font-size: smaller;
+    font-size: 2.5vw;
+}
+
+#product-box article ul{
+    padding: 1.5rem;
+    border-radius: 20px;
 }
 
 /*Nedenfor er koding for seksjon på leveranse.html*/
-.textbox{
+.textbox {
     grid-area: main;
-    width: 100%;
+    width: 90%;
     height: 100px;
     text-align: left;
-    margin: 1rem;
+    margin: 0.5rem;
     padding: 2rem;
     border: 3px solid rgb(23, 123, 23);
 }
 
+.textbox p{
+    font-size: 2.5vw;
+    margin:0;
+}
+
+.textbox li{
+    font-size: 2.5vw;
+}
+
 footer{
     display: flex;
-    text-align: right;
     grid-area: footer;
     padding: 1rem;
     gap: 5%;
 }
 
 footer p{
-    color: rgb(23, 123, 23)
+    color: rgb(23, 123, 23);
 }
 
 /*oppsett for analyse.html*/
 #analyse {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    font-size: 20px;
+    text-align: left;
+    font-size: 3vw;
 }
 
 #analyse section {
@@ -311,6 +319,22 @@ th, td {
 }
 /*KILDE: brukt https://www.w3schools.com/css/css_table.asp og ChatGPT for å sette style til tabellen*/
 
+.skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .skip:focus{
+    position: static;
+    width: auto;
+    height: auto;
+  }
+
+
 
 @media only screen and (min-width: 300px) {
     
@@ -330,8 +354,10 @@ th, td {
         float: right;
     }
 
-    .navbar li a{
+    .navbar a{
         font-size: 2vw;
+        text-decoration: none;
+        color: white;
     }
 
     main{
@@ -341,40 +367,19 @@ th, td {
     }
 
     /*Nedenfor er koding for hver atikkel på index.html*/
-    .kampanje{
-      width: 150%;
-    }
-
-    .barn{
-        width: 150%;
-    }
-
-    .dame {
-        width: 150%;
-    }
-
-    .herre {
-        width: 150%;
-    }
-
-    .informasjon {
-        width: 150%;
-
-    }
-
-    /*Koding for alle atikkel-modulene på produkt.html*/ 
-
     #forside-seksjoner{
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
-    #forside-seksjoner article{
-        max-width: 300px;
+    #forside-seksjoner button{
         width: 100%;
-    }
+        height: 22vw;
+        border: 3px solid rgb(32, 123, 32);
+  }
 
+    /*Koding for alle atikkel-modulene på produkt.html*/ 
     #product-box{
         display: flex;
         flex-direction: column;

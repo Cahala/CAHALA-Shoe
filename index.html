@@ -3,59 +3,59 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="athor" contet="Camilla H. Larsen">
+        <meta name="description" content="Velkommen til CAHALA Shoe - skobutikk med utvalg til hele familien og til alle årstider">
         <meta name="keywords" content="CAHALA Shoe, nettbutikk, skobutikk, kampanje, sko, sandaler, 
         tøfler, joggesko, sneakers, pensko, bunadsko, pumps, ballerina, tursko, overgangssko, vintersko,
         gummistøvler, boots, støvletter, støvler, sommer, vinter, høst, vår, damesko, barnesko, herresko">
+        <meta property="og:title" content="CAHALA Shoe - sko til hele familien, til en hver anledning">
+        <meta property="og:url" content="https://schema.org/AggregateRating">
+        <meta property="og:description" content="Alle våre barnesko, damesko, herresko og samt kampanje på sko">
+        <meta property="og:image" content="https://pixabay.com/photos/man-woman-dog-pet-pug-owners-2425121/">
+        <!--KILDER: koding for Open Graph-metatagger er hentet eksempelet fra forlesning om metadata-->
+        <!--KILDER: bildet hentet fra pixabay.com-->
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="stylesheet" href="css/fontawesome/css/fontawesome.css">
         <link rel="stylesheet" href="css/fontawesome/css/brands.css">
         <link rel="stylesheet" href="css/fontawesome/css/solid.css">
-        <title>CAHALA Shoe - sko til hele familiene til en hver anlending</title>
+        <title>CAHALA Shoe - nettbutikk for sko til hver anlending</title>
     </head>
     <body>
         <div id="grid-container">
             <header>
+                <a href="#forside-seksjoner" class="skip" alt="gå til varekategoriene">varekategoriene</a>
+                <a href="#flex-bottom" class="skip" alt="gå til kontaktinformasjon">kontaktinformasjon</a>
+                <!-- KILDE: brukt https://www.w3schools.com/accessibility/accessibility_skip_links.php-->
                 <div class="flex-container">
-                    <nav>
-                        <i id="ham" class="fa-solid fa-bars" style="color: #ffffff;"></i>
-                        <i id="user" class="fa-solid fa-user" style="color: #ffffff;"></i>
-                        <i id="heart" class="fa-solid fa-heart" style="color: #ffffff;"></i>
-                        <i id="shopping" class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        <i id="search" class="fa-regular fa-magnifying-glass" style="color: #ffffff;"></i>
+                    <nav class="navbar">
+                        <a href="index.html"><i class="fa-solid fa-bars"></i> Meny</a>
+                        <a href="#"><i class="fa-solid fa-user"></i> Profil</a> 
+                        <a href="#"><i class="fa-solid fa-heart"></i> Favoritter</a> 
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i> Handlekurv</a> 
+                        <a href="analyse.html"><i class="fa-solid fa-chart-simple"></i> Analyse</a>
+                        <form>
+                            <i class="fa-regular fa-magnifying-glass"></i>
+                            <input type="search">
+                        </form>
                         <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
-                        <ul class="navbar">
-                            <li><a href="index.html">Meny</a></li>
-                            <li><a href="#">Profil</a></li>
-                            <li><a href="#">Favoritter</a></li>
-                            <li><a href="#">Handlekurv</a></li>
-                            <li><a href="#">Søk</a></li>
-                            <li><a href="analyse.html">Analyse</a></li>
-                        </ul>
                     </nav>
+                    <!--KILDE: brukt https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_icon_bar_v
+                                for å sette ikonene til teksten med linker-->
                 </div>
             </header>
-            <main id="seksjoner">
+            <main id="main">
                     <h1><a href="index.html">CAHALA Shoe</a></h1>
+                    <p>Her finner du sko til hele familien, til alle anledninger. Sjekk ut vårt utvalg, 
+                        og få med deg høstens beste kampanjer på sko hos oss.</p>
+                    <p>Vi har delt inn vårt utvalg av sko, kampanjer og informasjon så det skal være 
+                        enkelt for deg å finne det du trenger for en fortreffelig handel hos oss. 
+                    </p>
                 <section id="forside-seksjoner">
-                    <article>
-                        <button class="kampanje" onclick="window.location.href='produkt.html'">kampanje</button>
-                    </article>
-
-                    <article>
-                        <button class="barn" onclick="window.location.href='#'">barn</button>
-                    </article> 
-
-                    <article>
-                        <button class="dame"  onclick="window.location.href='#'">dame</button>
-                    </article>
-
-                    <article>
-                        <button class="herre" onclick="window.location.href='#'">herre</button>
-                    </article>
-
-                    <article>
+                        <button class="kampanje" onclick="window.location.href='produkt.html'"> Sjekk<br>høstens kampanjer</button>
+                        <button class="barn" onclick="window.location.href='#'">Alt av barnsko<br>finner du her</button>
+                        <button class="dame"  onclick="window.location.href='#'">Alt av damesko<br>finner du her</button>
+                        <button class="herre" onclick="window.location.href='#'">Alt av herresko<br>finner du her</button>
                         <button class="informasjon" onclick="window.location.href='leveranse.html'">informasjon</button>
-                    </article>
                     <!--KILDE: brukt https://www.altcademy.com/blog/how-to-link-a-button-to-another-page-in-html/ for å få til link på knapp-->
                 </section>
             </main>
@@ -66,19 +66,8 @@
                 <p><i class="fa-solid fa-envelope" style="color: #177b17;"></i></p>
                 <p><i class="fa-solid fa-phone" style="color: #177b17;"></i></p>
                 <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
+                <a href="#main" class="skip">Gå til toppen av siden</a>
             </footer>
         </div>
-        <script>
-            let x = document.querySelector(".navbar")
-            document.getElementById("ham").addEventListener("click", (e) => {
-
-                if (x.className === "navbar") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "navbar"
-                }
-            })
-            //KILDE: det som står i script er hentet fra forelesning 16.oktober 2023.
-        </script>
     </body>
 </html>
