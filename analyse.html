@@ -14,6 +14,11 @@
         <meta property="og:image" content="https://pixabay.com/photos/seo-sem-marketing-optimization-web-758264/">
         <!--KILDER: koding for Open Graph-metatagger er hentet eksempelet fra forlesning om metadata-->
         <!--KILDER: bildet hentet fra pixabay.com-->
+        <meta name="twitter:title" content="CAHALA Shoe - sko til hele familien, til en hver anledning">
+        <meta name="twitter:description" content="Alle våre barnesko, damesko, herresko og samt kampanje på sko">
+        <meta name="twitter:image" content="https://pixabay.com/photos/man-woman-dog-pet-pug-owners-2425121/">
+        <!--KILDE: brukt ChatGPT for å skrive inn metatagger til X (twitter)-->
+        <!--KILDER: bildet hentet fra pixabay.com-->
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="stylesheet" href="css/fontawesome/css/fontawesome.css">
         <link rel="stylesheet" href="css/fontawesome/css/brands.css">
@@ -23,10 +28,10 @@
     <body>
         <div id="grid-container">
             <header id="header">
-                <a href="#nokkelord" class="skip">Nøkkelord</a>
-                <a href="#for-utbedring" class="skip">Resultat før utbedring</a>
-                <a href="#etter-utbedring" class="skip">Resultat etter utbedring</a>
-                <a href="#flex-bottom" class="skip">kontaktinformasjon</a>
+                <a href="#nokkelord" class="skip" aria-label="navigering til nøkkelord">Nøkkelord</a>
+                <a href="#for-utbedring" class="skip" aria-label="navigering til hovedinnhold,før utbedring">Resultat før utbedring</a>
+                <a href="#etter-utbedring" class="skip" aria-label="navigering til hovedinnhold, etter utbedring">Resultat etter utbedring</a>
+                <a href="#flex-bottom" class="skip" aria-label="navigasjon til kontaktinformasjon">kontaktinformasjon</a>
                 <!-- KILDE: brukt https://www.w3schools.com/accessibility/accessibility_skip_links.php-->
                 <div class="flex-container">
                     <h1><a href="index.html">CAHALA Shoe</a></h1>
@@ -37,17 +42,17 @@
                         <a href="#"><i class="fa-solid fa-cart-shopping" aria-label="Se varer lagt i handlekurven"></i> Handlekurv</a> 
                         <a href="analyse.html"><i class="fa-solid fa-chart-simple" aria-label="analyse av nettsiden"></i> Analyse</a>
                         <form>
-                            <i class="fa-regular fa-magnifying-glass" aria-label="søkefelt"></i>
-                            <input type="search">
+                            <label for="search">Søk</label>
+                                <input type="search" aria-label="search">
                         </form>
-                          <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
+                        <!--KILDE: https://www.w3schools.com/tags/tag_input.asp-->
                     </nav>
                 </div>
             </header>
             <main id="analyse">
                 <ul class="breadcrumb">
-                    <li><a href="index.html">Forside</a></li>
-                    <li><a href="analyse.html">Analyse</a></li>
+                    <li><a href="index.html" aria-label="link til forsiden">Forside</a></li>
+                    <li><a href="analyse.html" aria-label="link til analayse">Analyse</a></li>
                 </ul>
                 <!--KILDE: brukt https://www.w3schools.com/howto/howto_css_breadcrumbs.asp for å lage
                 breadcrumbs i steden for den stistrukturen jeg opprinnelig hadde laget-->
@@ -129,7 +134,7 @@
                     <img src="css/img/Mobile/Lighthouse/FORSIDE/UU/1.jpg" alt="UU anlyse med Lighthouse for forsiden og produkt siden, bilde 1">
                     <img src="css/img/Mobile/Lighthouse/FORSIDE/UU/2.jpg" alt="UU anlyse med Lighthouse for forsiden og produkt siden, bilde 2">
 <!--CSS: Få bilde 2 til å være i flukt med bilde 1 i toppen eller midtstilt i høyde -->
-                    <h4>Leverande/informasjonsside</h4>
+                    <h4>Leveranse-/informasjonsside</h4>
                     <p>Analysen ga et utslag på accessibility med 96% og 100% for best practices for 
                         siden med leveranseinformasjon. For accessibility var tilbakemeldingen at 
                         overskriftselementet ikke er i en sekvensielt synkende rekkefølge, 
@@ -162,7 +167,7 @@
                         overskriftselement.</p>
                     <img src="css/img/webaim/Produktside.jpg" alt="UU analyse fra Webaim for produktsiden">
                     
-                    <h4>Leveranse/informasjonsside</h4>
+                    <h4>Leveranse-/informasjonsside</h4>
                     <p>Ved UU analyse (accessibility og best practices) av produktsiden fikk jeg;
                         5 varslinger.<br> Tre av de er samme som for produktsiden; <em>meny</em> i 
                         "header", brødsmule navigeringen og <em>kontakt oss</em> i "footer". Et nytt
@@ -672,18 +677,103 @@ for å sett inn tabellen ovenfor-->
                     </dl>
                     <dl>
                         <dt>ChatGPT: anbefalte å sjekke skjermleservennligheten.</dt>
-                            <dd>- Det gjøres i neste steg under forbedring av nettsiden. Gå ned til skjermleserkompatibilitet <a href="#skjerm" class="skip">skjermleserkompatibilitet</a>
+                            <dd>- Det gjøres i neste steg under forbedring av nettsiden. Gå ned til skjermleserkompatibilitet <a href="#skjerm" class="skip" aria-label="navigasjon til skjermleserkompatibilitet">skjermleserkompatibilitet</a>
                             for å lese utfyllende om resultatet etter utført test skjermleservennligheten for alle sidene.</dd>
                     </dl>
 <!--KILDE: brukt https://www.w3schools.com/html/html_lists.asp for å lage liste med innrykk-->
                 </section>
 
                 <section>
-                    <h3>SEO og UU resultater etter utbedring</h3>
+                    <h3>Bildeeksempler på før og etter utbedring</h3>
+                    <p>Alle bildeeksemplene er tatt i utgangspunkt i mobiloppsett, med tanke på mobil first
+                        prisnippet. Mobiloppsett i disse eksmeplene er med iPhone 12/13 Pro Max</p>
+                    <h5>Forsiden</h5>
+                    <figure>
+                        <img src="css/img/For_forbedring/Forsiden_mobil_12_13_pro.jpg" alt="fremvising av forsiden til nettsiden før forbedringer er gjort">
+                        <figcaption>Før: man ser at det store sekjsonene/knappene midt på siden er smale 
+                            og ikke optimalt resposivt design. Header delene er veldig høy, ikoner og tekst henger ikke sammen og det er ikke
+                            søkefelt. Tekstliginnhold er det ikke og knappene sier lite om at de skal 
+                            trykkes på for å se produktene
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="css/img/Nettside_etter_forbedring/forsiden_mobile.jpg" alt="fremvising av forsiden til nettsiden etter forbedringer er gjort">
+                        <figcaption>Etter: </figcaption>
+                    </figure>
+
+                    <h5>Produktsiden</h5>
+                    <figure>
+                        <img src="css/img/For_forbedring/produkt_mobil_12_13_pro.jpg" alt="fremvising av produktsiden til nettsiden før forbedringer er gjort">
+                        <figcaption>Før: her er breadcrumb er ikke optimali. Det samme går igjen for header som på forsiden, den er veldig høy, ikoner og 
+                            tekst henger ikke sammen og det mangler søkefelt. Overskriften var heller ikke 
+                            responsiv.
+                        </figcaption>
+                    </figure>                    
+                    <figure>
+                        <img src="css/img/Nettside_etter_forbedring/produkt.jpg" alt="fremvising av produktsiden til nettsiden ettter forbedringer er gjort">
+                        <figcaption>Etter: </figcaption>
+                    </figure>
+
+                    <h5>Leveranse</h5>
+                    <figure>
+                        <img src="css/img/For_forbedring/leveranse_mobil_12_13_pro.jpg" alt="fremvising av leveransesiden til nettsiden før forbedringer er gjort">
+                        <figcaption>Før: det samme går igjen for header også på denne siden naturlig nok.
+                            Overskriften og undermenyen var ikke repsonsive typopgrafi. 
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="css/img/Nettside_etter_forbedring/Leveranse.jpg"  alt="fremvising av leveransesiden til nettsiden før forbedringer er gjort">
+                        <figcaption>Etter:</figcaption>
+                    </figure>
+                    <!--KILDE: brukte ChatGPT som hjelp til kode for hvordan sette inn bildetekst.-->
                 </section>
 
-                <section id="skjerm">
+                <section>
+                    <h3>SEO og UU resultater etter utbedring</h3>
+                    <h5>Forside</h5>
+                    <p>Lighthouse</p>
+                    <p>Resultatet av UU-analyse etter forbedring av siden</p>
+                    <img src="css/img/Mobile/Etter_forbedring/Lighthouse/Foriside_UU_1.jpg" alt="1 av 2 fremvising av UU-resultat for forsiden">
+                    <img src="css/img/Mobile/Etter_forbedring/Lighthouse/Foriside_UU_2.jpg" alt="2 av 2 fremvising av UU-resultat for forsiden">
+                    <p>Resultatet av SEO-analyse etter forbedring av siden</p>
+                    <img src="css/img/Mobile/Etter_forbedring/Lighthouse/Forside_SEO.jpg" alt="fremvising av SEO-resultat for forsiden">
+                    <p>Webaim</p>
+                    <img src="css/img/Mobile/Etter_forbedring/Webaim/forside.jpg" alt="fremvisning av resultatene fra Webaim">
+
+                    <h5>Produktside</h5>
+                    <p>Lighthouse</p>
+                    <p>Resultatet av UU-analyse etter forbedring av siden</p>
+                    <img src="css/img/Mobile/Etter_forbedring/Lighthouse/Produkt_UU_1.jpg" alt="1 av 2 fremvising av UU-resultat for produktsiden">
+                    <img src="css/img/Mobile/Etter_forbedring/Lighthouse/Produkt_UU_2.jpg" alt="2 av 2 fremvising av UU-resultat for produktsiden">
+                    <p>Resultatet av SEO-analyse etter forbedring av siden</p>
+                    <img src="css/img/Mobile/Etter_forbedring/Lighthouse/Produkt_SEO.jpg" alt="fremvising av SEO-resultat for produktsiden">
+                    <p>Webaim</p>
+                    <img src="css/img/Mobile/Etter_forbedring/Webaim/produkt.jpg" alt="fremvisning av resultatene fraWebaim">
+                    
+                    <h5>Leveranse-/informasjonsside</h5>
+                    <p>Lighthouse</p>
+                    <p>Resultatet av UU-analyse etter forbedring av siden</p>
+                    <img src="css/img/Mobile/Etter_forbedring/Lighthouse/Leveranse_UU_1.jpg" alt="1 av 2 fremvising av UU-resultat for leveransesiden">
+                    <img src="css/img/Mobile/Etter_forbedring/Lighthouse/Leveranse_UU_2.jpg" alt="1 av 2 fremvising av UU-resultat for leveransesiden">
+                    <p>Resultatet av SEO-analyse etter forbedring av siden</p>
+                    <img src="css/img/Mobile/Etter_forbedring/Lighthouse/Leversanse_SEO.jpg" alt="fremvising av SEO-resultat for leveransesiden">>
+                    <p>Webaim</p>
+                    <img src="css/img/Mobile/Etter_forbedring/Webaim/Leveranse.jpg" alt="fremvisning av resultatene fra Webaim">
+                </section>
+
+                <section>
                     <h3>Skjermleserkompatibilitet</h3>
+                    <p>Skjermleser fungerte ikke helt optimalt. Den leste ikke opp det tekstlige innholdet
+                        på sidene og sa ikke noe om det som er angitt i "footer". For produktsiden sa den 
+                        ingenting om at det er en filtrerings mulighet, og for siden med informasjon om 
+                        leveranse ble undermenyen med informasjon om betaling, retur etc. ikke beksrevet. 
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Tastaturnavigasjon</h3>
+                    <p>Tastaturnavigasjon virker optimalt med tab, enter og piltastene opp og ned på siden. 
+                        I tillegg til at det navigeres rundt på siden blir det markert rundt der man er.</p>
                 </section>
 
             </main>
@@ -694,7 +784,7 @@ for å sett inn tabellen ovenfor-->
                 <p><i class="fa-solid fa-envelope" style="color: #177b17;" aria-label="skobutikkens epostadresse"></i></p>
                 <p><i class="fa-solid fa-phone" style="color: #177b17;" aria-label="skobutikkens telefonnummer"></i></p>
                 <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
-                <a href="#analyse" class="skip">Gå til toppen av siden</a>
+                <a href="#analyse" class="skip" aria-label="navigering til toppen av siden">Gå til toppen av siden</a>
             </footer>
         </div>
     </body>

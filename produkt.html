@@ -14,6 +14,11 @@
         <meta property="og:image" content="https://pixabay.com/photos/fall-wood-fund-autumn-leaves-2690176/">
         <!--KILDER: koding for Open Graph-metatagger er hentet eksempelet fra forlesning om metadata-->
         <!--KILDER: bildet hentet fra pixabay.com-->
+        <meta name="twitter:title" content="CAHALA Shoe - sko til hele familien, til en hver anledning">
+        <meta name="twitter:description" content="Alle våre barnesko, damesko, herresko og samt kampanje på sko">
+        <meta name="twitter:image" content="https://pixabay.com/photos/man-woman-dog-pet-pug-owners-2425121/">
+        <!--KILDE: brukt ChatGPT for å skrive inn metatagger til X (twitter)-->
+        <!--KILDER: bildet hentet fra pixabay.com-->
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="stylesheet" href="css/fontawesome/css/fontawesome.css">
         <link rel="stylesheet" href="css/fontawesome/css/brands.css">
@@ -23,10 +28,10 @@
     <body class="produkt">
         <div id="grid-container">
             <header id="header">
-                <a href="#flex-bottom" class="skip">kontaktinformasjon</a>
+                <a href="#flex-bottom" class="skip" aria-label="navigasjon til kontaktinformasjon">kontaktinformasjon</a>
                 <!-- KILDE: brukt https://www.w3schools.com/accessibility/accessibility_skip_links.php-->
                 <div class="flex-container">
-                    <h1><a href="index.html">CAHALA Shoe</a></h1>
+                    <h1><a href="index.html" aria-label="link til forsiden">CAHALA Shoe</a></h1>
                     <nav class="navbar">
                         <a href="index.html"><i class="fa-solid fa-bars" aria-label="gå til forsiden"></i> Meny</a>
                         <a href="#"><i class="fa-solid fa-user" aria-label="gå til din profil"></i> Profil</a> 
@@ -34,17 +39,17 @@
                         <a href="#"><i class="fa-solid fa-cart-shopping" aria-label="Se varer lagt i handlekurven"></i> Handlekurv</a> 
                         <a href="analyse.html"><i class="fa-solid fa-chart-simple" aria-label="analyse av nettsiden"></i> Analyse</a>
                         <form>
-                            <i class="fa-regular fa-magnifying-glass" aria-label="søkefelt"></i>
-                            <input type="search">
+                            <label aria-label="søkefunksjon">Søk</label>
+                                <input type="search" aria-label="søkefelt">
                         </form>
-                          <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
+                          <!--KILDE: https://www.w3schools.com/tags/tag_input.asp-->
                     </nav>
                 </div>
             </header>
             <main id="main">
                 <ul class="breadcrumb">
-                    <li><a href="index.html">Forside</a></li>
-                    <li><a href="produkt.html">Kampanjer</a></li>
+                    <li><a href="index.html" aria-label="link til forsiden">Forside</a></li>
+                    <li><a href="produkt.html" aria-label="link til kampanje">Kampanjer</a></li>
                 </ul>
                 <!--KILDE: brukt https://www.w3schools.com/howto/howto_css_breadcrumbs.asp for å lage
                 breadcrumbs i steden for den stistrukturen jeg opprinnelig hadde laget-->
@@ -133,7 +138,7 @@
                 <p><i class="fa-solid fa-envelope" style="color: #177b17;" aria-label="skobutikkens epostadresse"></i></p>
                 <p><i class="fa-solid fa-phone" style="color: #177b17;" aria-label="skobutikkens telefonnummer"></i></p>
                 <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
-                <a href="#main" class="skip">Gå til toppen av siden</a>
+                <a href="#main" class="skip" aria-label="navigasjon til toppen av siden">Gå til toppen av siden</a>
             </footer>
         </div>
     </body>

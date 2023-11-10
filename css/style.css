@@ -7,7 +7,6 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:"header" "main" "footer";
- 
 }
 
 body {
@@ -16,17 +15,26 @@ body {
     margin: 0;
 }
 
-
-header, main, footer{
-    padding: 1rem;
-}
-
 /*PRODUKT.HTML, LEVERANSE.HTML og ANALYSE.HTML: bedriftnavn i header*/
 header{
     background-color: rgb(32, 123, 32);
     text-align: center;
     font-size: 3vw;
     grid-area: header;
+}
+
+.flex-container{
+    align-items: flex-start;
+    justify-content:left;
+    gap: 5%;
+    padding:25px;
+}
+
+.flex-container-forside{
+    align-items: flex-start;
+    justify-content:left;
+    gap: 5%;
+    padding:25px;
 }
 
 /*Header for produkt.html, leveranse.html og analyse.html*/
@@ -39,19 +47,38 @@ header{
 .navbar{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .navbar a{
     color: white;
     font-size: 3vw;
     display: flex;
-
 }
 
-.navbar form i{
+.navbar form label {
     color: white;
+    font-size: 3vw;
 }
+
+.navbar-forside {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.navbar-forside a{
+    color: white;
+    font-size: 3vw;
+    display: flex;
+}
+
+
+.navbar-forside form label {
+    color: white;
+    font-size: 3vw;
+}
+
 
 /*PRODUKT.HTML, LEVERANSE.HTML og ANALYSE.HTML: overskrift*/
 main h1{
@@ -201,10 +228,7 @@ button {
     font-weight: bold;
 }
 
-
-
-/*Koding for alle atikkel-modulene på produkt.html*/ 
-
+/*Koding for alle atikkel-modulene på produkt.html*/
 #product-box{
     flex-direction: column;
     justify-content: center;
@@ -233,20 +257,18 @@ button {
         width: 100%;
 }
 
+
 /*Nedenfor er koding for seksjon på leveranse.html*/
 .textbox {
     grid-area: main;
-    width: 90%;
-    height: 100px;
-    text-align: left;
-    margin: 0.5rem;
-    padding: 2rem;
+    height: 150px;   
+    padding: 1rem;
     border: 3px solid rgb(23, 123, 23);
 }
 
 .textbox p{
     font-size: 2.5vw;
-    margin:0;
+
 }
 
 .textbox li{
@@ -264,23 +286,6 @@ footer p{
     color: rgb(23, 123, 23);
 }
 
-/*oppsett for analyse.html*/
-#analyse {
-    text-align: left;
-    font-size: 3vw;
-    
-}
-
-#analyse section {
-    margin-bottom: 3rem;
-    
-}
-
-#analyse section img {
-    border: 3px solid rgb(23, 123, 23);
-    border-radius: 8px;
-    width: 75%;
-}
 
 /*bilder på analyse.html*/
 #nokkelord img{
@@ -288,26 +293,98 @@ footer p{
     border-radius: 8px;
     border: 5px solid rgb(23, 123, 23);
     margin-right: 0.5rem;
-    margin-bottom: 2rem;
+    justify-content: center;
 }
 
-/*Tabell på analyse.html*/
-
-table{
-    border-collapse: collapse;
+/*oppsett for analyse.html*/
+#analyse p, li, dt, dd {
+    text-align: left;
     font-size: 2vw;
 }
 
+#analyse h1{
+    font-size: 3.5vw;
+    margin-bottom: 0;
+}
+#analyse h2{
+    font-size: 2.5vw;
+    margin-bottom: 0;
+}
+#analyse h3{
+    font-size: 2.5vw;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+#analyse h4{
+    font-size: 2.5vw;
+    margin-bottom: 0;
+}
+#analyse h5{
+    font-size: 2.5vw;
+    margin-bottom: 0;
+}
 
-table, th, td {
-    border: 5px solid rgb(23, 123, 23);
+#analyse caption {
+    font-size: 1.7vw;
+  
+}
+
+#analyse section {
+    margin-bottom: 3rem;
+    
+}
+
+#analyse article {
+    margin-bottom: 1.5rem;
+}
+
+#analyse section img {
+
+    border-radius: 8px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/*Tabell på analyse.html*/
+table{
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+    /*KILDE: brukt https://www.w3schools.com/css/css_table_responsive.asp for å sette overfloc-x*/
+}
+
+table tr:hover {
+    background-color:rgb(23, 123, 23);
+    /*KILDE: brukt https://www.w3schools.com/css/css_table_style.asp*/
+    color: white;
+}
+
+
+table th {
+    border: 3px solid rgb(23, 123, 23);
+    font-size: 1.5vw;
+    padding: 3px;
+    text-align: center;
+}
+
+
+table tr td {
+    border: 3px solid rgb(23, 123, 23);
+    vertical-align: top;
+    padding: 3px;
+    font-size: 1.5vw;
 }
 
 .multi-row {
     text-orientation: mixed;
     white-space: nowrap;
+    text-align: center;
 }
 /*KILDE: brukt https://www.w3schools.com/css/css_table.asp og ChatGPT for å sette style til tabellen*/
+
+#analyse ul li {
+ margin-bottom: 0.5rem;
+}
 
 .skip {
     position: absolute;
@@ -316,15 +393,25 @@ table, th, td {
     width: 1px;
     height: 1px;
     overflow: hidden;
-  }
-
+}
   .skip:focus{
     position: static;
     width: auto;
     height: auto;
-  }
+}
 
+figure {
+    margin: 0;
+}
 
+#analyse section figure img {
+    border: 3px solid black;
+    max-width: 100%; 
+}
+
+figcaption {
+    font-size: 2.5vw;
+}
 
 @media only screen and (min-width: 300px) {
     
@@ -334,20 +421,43 @@ table, th, td {
         grid-template-areas: "header header header header" ". main main ." "footer footer footer footer";
     }
 
-    html{
-        font-size: calc(1em + 1vw); 
-    }
-
     header{
         grid-area: header;
         width: 100%;
         float: right;
     }
 
-    .navbar a{
-        font-size: 2vw;
+    .navbar-forside {
+        grid-area: header;
+        width: 100%;
+        float: right;
+        margin-top: 4.75rem;
+    }
+
+    .navbar {
+        grid-area: header;
+        width: 100%;
+        float: right;
+    }
+
+    .navbar-forside a {
+        font-size: 2.5vw;
         text-decoration: none;
         color: white;
+    }
+
+    .navbar a{
+        font-size: 2.5vw;
+        text-decoration: none;
+        color: white;
+    }
+
+    .navbar-forside form label {
+        font-size: 3vw;
+    }
+
+    .navbar form label{
+        font-size: 2vw;
     }
 
     main{
@@ -367,7 +477,7 @@ table, th, td {
         width: 100%;
         height: 22vw;
         border: 3px solid rgb(32, 123, 32);
-  }
+    }
 
     /*Koding for alle atikkel-modulene på produkt.html*/ 
     #product-box{
@@ -395,6 +505,20 @@ table, th, td {
         max-width: 900px;
         width: 100%;
         height: 75%;
+    }
+
+
+    /*ANALYSE.HTML tabell*/
+    table tr:hover {
+        background-color:rgb(23, 123, 23);
+        /*KILDE: brukt https://www.w3schools.com/css/css_table_style.asp*/
+        color: white;
+    }
+
+    table {
+        width: auto;
+        height: auto;
+        overflow-x: auto;
     }
     
     footer{
