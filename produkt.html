@@ -23,9 +23,10 @@
         <link rel="stylesheet" href="css/fontawesome/css/fontawesome.css">
         <link rel="stylesheet" href="css/fontawesome/css/brands.css">
         <link rel="stylesheet" href="css/fontawesome/css/solid.css">
+
         <title>CAHALA Shoe - sko som er på kampanje i høst</title>
     </head>
-    <body class="produkt">
+    <body class="produkt" itemscope itemtype="https://schema.org/WebPage">
         <div id="grid-container">
             <header id="header">
                 <a href="#flex-bottom" class="skip" aria-label="navigasjon til kontaktinformasjon">kontaktinformasjon</a>
@@ -33,112 +34,201 @@
                 <div class="flex-container">
                     <h1><a href="index.html" aria-label="link til forsiden">CAHALA Shoe</a></h1>
                     <nav class="navbar">
-                        <a href="index.html"><i class="fa-solid fa-bars" aria-label="gå til forsiden"></i> Meny</a>
+                        <a href="leveranse.html"><i class="fa-solid fa-circle-info" aria-label="gå til informasjon"></i>  Informasjon</a>
+                        <a href="produkt.html"><i class="fa-solid fa-shoe-prints" aria-label="alle sko"></i>Produkter</a>
                         <a href="#"><i class="fa-solid fa-user" aria-label="gå til din profil"></i> Profil</a> 
                         <a href="#"><i class="fa-solid fa-heart" aria-label="Se dine favoritter"></i> Favoritter</a> 
                         <a href="#"><i class="fa-solid fa-cart-shopping" aria-label="Se varer lagt i handlekurven"></i> Handlekurv</a> 
                         <a href="analyse.html"><i class="fa-solid fa-chart-simple" aria-label="analyse av nettsiden"></i> Analyse</a>
-                        <form>
-                            <label aria-label="søkefunksjon">Søk</label>
-                                <input type="search" aria-label="søkefelt">
+                         <!--KILDE: ikoner er hentet fra fontawesome.com-->
+                         <form>
+                            <input type="search" placeholder="..." title="search">
+                            <button type="submit" title="Søk her etter"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <!--KILDE: https://www.w3schools.com/tags/tag_input.asp-->
+                            <!--KILDE: ikoner er hentet fra fontawesome.com-->
+<!--CSS: endre størrelse og utseende for søk-knapp-->
                         </form>
-                          <!--KILDE: https://www.w3schools.com/tags/tag_input.asp-->
                     </nav>
                 </div>
             </header>
-            <main id="main">
-                <ul class="breadcrumb">
-                    <li><a href="index.html" aria-label="link til forsiden">Forside</a></li>
-                    <li><a href="produkt.html" aria-label="link til kampanje">Kampanjer</a></li>
+            <main itemscope itemtype="https://schema.org/Product">
+                <ul class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="index.html" aria-label="link til forsiden">
+                            <span itemprop="name">Forside</span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="produkt.html" aria-label="link til kampanje">
+                            <span itemprop="name">Kampanjer</span>
+                        </a>
+                        <meta itemprop="position" content="2">
+                    </li>
                 </ul>
                 <!--KILDE: brukt https://www.w3schools.com/howto/howto_css_breadcrumbs.asp for å lage
                 breadcrumbs i steden for den stistrukturen jeg opprinnelig hadde laget-->
+                <!--KILDE: microdata for breadcrumbs er hentet fra forelesning om emnet-->
 
-                <h1>KAMPANJE</h1>
-                <!--MÅ FIKSE LINK TIL FILTER-->
-                <section id="product-box">
+                <h1 itemprop="name">KAMPANJE</h1>
+                <section id="product-box" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                    <meta itemprop="reviewCount" content="100">
+                    <meta itemprop="ratingValue" content="4.4">
                     <div class="filter">
-                        <p>Filtrer</p>
+                        <a href="#">Filtrer</a>
                     </div>
-                    <article class="gortex">
-                        <img src="css/img/shoes-584850_960_720.jpg" alt="Brown Gortex Shoe">
+                    <section>
+                        <img itemprop="image" src="css/img/shoes-584850_960_720.jpg" alt="Brown Gortex Shoe">
                         <!--KILDE: bilde hentet fra https://pixabay.com/no/photos/sko-fott%C3%B8y-tursko-g%C3%A5-utend%C3%B8rs-584850/-->
-                        <ul>
-                            <li>Størrelse: 40-45</li>
-                            <li>Farge: brun, sort</li>
-                            <li>Spesifikasjon: Gortex</li>
-                            <li>Varebeholdning: på lager</li>
-                            <li>Pris: 1999,-</li>
-                        </ul>
-                            <i class="fa-regular fa-heart" style="color: #177b17;"></i>
-                            <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
-                    </article>
+                        <h6>SALOMON</h6>
+                            <p>Tursko med normal passform til herre for bruk i skog og mark</p>
 
-                    <article class="sneakers">
-                        <img src="css/img/shoes-1433925_960_720.jpg" alt="Grey sneakers with cartoons">
+                        <!--KILDE: fiktiv produkttekst til bildet er hentet med inspirasjon fra XXL.no-->
+                        <form itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <meta itemprop="priceCurrency" content="NOK">
+                            <span itemprop="price" content="1999">Pris: 1999 kr</span>
+                            <label for="size">Størrelse</label>
+                            <select name="size" id="size">
+                                <option value="40" itemprop="size">40</option>
+                                <option value="41" itemprop="size">41</option>
+                                <option value="42" itemprop="size">42</option>
+                                <option value="43" itemprop="size">43</option>
+                                <option value="44" itemprop="size">44</option>
+                                <option value="45" itemprop="size">45</option>
+                            </select>
+                            <label for="color">Farge</label>
+                            <select name="color" id="color">
+                                <option value="Brun" itemprop="color">brun</option>
+                                <option value="Sort" itemprop="color">sort</option>
+                            </select>
+                            <button><i class="fa-regular fa-heart" style="color: #177b17;"></i>Legg til favoritter</button>
+                            <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
+                            <!--KILDE: microdata for pris og størrelse er hentet fra forelesning om emnet-->
+                        </form>
+                    </section>
+
+                    <section>
+                        <img itemprop="image" src="css/img/shoes-1433925_960_720.jpg" alt="Grey sneakers with cartoons">
                         <!--KILDE: bilde hentet fra https://pixabay.com/no/photos/sko-joggesko-converse-fott%C3%B8y-1433925/-->
-                        <ul>
-                            <li>Størrelse: 38-42</li>
-                            <li>Farge: grå med mønster</li>
-                            <li>Spesifikasjon: tøysko</li>
-                            <li>Varebeholdning: på lager</li>
-                            <li>Pris: 999,-</li>
-                        </ul>
-                            <i class="fa-regular fa-heart" style="color: #177b17;"></i>
+                        <h6>CONVERS</h6>
+                        <p>Kule tøysko for barn og ungdom</p>
+                        <!--KILDE: fiktiv produkttekst til bildet er hentet med inspirasjon fra XXL.no-->
+                        <form itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <meta itemprop="priceCurrency" content="NOK">
+                            <span itemprop="price" content="999">Pris: 999 kr</span>
+                            <label for="size">Størrelse</label>
+                            <select name="size" id="size">
+                                <option value="38" itemprop="size">38</option>
+                                <option value="39" itemprop="size">39</option>
+                                <option value="40" itemprop="size">40</option>
+                                <option value="41" itemprop="size">41</option>
+                                <option value="42" itemprop="size">42</option>
+                            </select>
+                            <label for="color">Farge</label>
+                            <select name="color" id="color">
+                                <option value="Brun" itemprop="color">grå med print</option>
+                            </select>
+                            <button><i class="fa-regular fa-heart" style="color: #177b17;"></i>Legg til favoritter</button>
                             <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
-                    </article>
+                            <!--KILDE: microdata for pris og størrelse er hentet fra forelesning om emnet-->
+                            </form>
+                    </section>
 
-                    <article class="pumps">
-                        <img src="css/img/womens-shoes-178162_960_720.jpg" alt="Red pumps">
+                    <section>
+                        <img itemprop="image" src="css/img/womens-shoes-178162_960_720.jpg" alt="Red pumps">
                         <!--KILDE: bilde hentet fra https://pixabay.com/no/photos/kvinners-sko-r%C3%B8d-pin-mote-178162/-->
-                        <ul>
-                            <li>Størrelse: 36-40</li>
-                            <li>Farge: rød</li>
-                            <li>Spesifikasjon: pensko</li>
-                            <li>Varebeholdning: på lager</li>
-                            <li>Pris: 799,-</li>
-                        </ul>
-                            <i class="fa-regular fa-heart" style="color: #177b17;"></i>
+                        <h6>CLARKS</h6>
+                        <p>Stilig pensko med god passform for en helaften i festliglag</p>
+                        <!--KILDE: fiktiv produkttekst til bildet er hentet med inspirasjon fra XXL.no-->
+                        <form itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <meta itemprop="priceCurrency" content="NOK">
+                            <span itemprop="price" content="799">Pris: 799 kr</span>
+                            <label for="size">Størrelse</label>
+                            <select name="size" id="size">
+                                <option value="36" itemprop="size">36</option>
+                                <option value="37" itemprop="size">37</option>
+                                <option value="38" itemprop="size">38</option>
+                                <option value="39" itemprop="size">39</option>
+                                <option value="40" itemprop="size">40</option>
+                            </select>
+                            <label for="color">Farge</label>
+                            <select name="color" id="color">
+                                <option value="Brun" itemprop="color">rød</option>
+                            </select>
+                            <button><i class="fa-regular fa-heart" style="color: #177b17;"></i>Legg til favoritter</button>
                             <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
-                    </article>
+                            <!--KILDE: microdata for pris og størrelse er hentet fra forelesning om emnet-->
+                        </form>
+                    </section>
 
-                    <article class="nike">
-                        <img src="css/img/shoes-791044_960_720.jpg" alt="Grey Nike Shoe">
+                    <section>
+                        <img itemprop="image" src="css/img/shoes-791044_960_720.jpg" alt="Grey Nike Shoe">
                         <!--KILDE: bildet hentet fra https://pixabay.com/no/photos/sko-kvinne-pike-sport-jogge-l%C3%B8per-791044/-->
-                        <ul>
-                            <li>Størrelse: 38-42</li>
-                            <li>Farge: grå, hvit, blå</li>
-                            <li>Spesifikasjon: tøysko</li>
-                            <li>Varebeholdning: på lager</li>
-                            <li>Pris: 999,-</li>
-                        </ul>
-                            <i class="fa-regular fa-heart" style="color: #177b17;"></i>
+                        <h6>NIKE</h6>
+                        <p>Fine fritidssko for dame og herre, med god passform</p>
+                        <!--KILDE: fiktiv produkttekst til bildet er hentet med inspirasjon fra XXL.no-->
+                        <form itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <meta itemprop="priceCurrency" content="NOK">
+                            <span itemprop="price" content="999">Pris: 999 kr</span>
+                            <label for="size">Størrelse</label>
+                            <select name="size" id="size">
+                                <option value="38" itemprop="size">38</option>
+                                <option value="39" itemprop="size">39</option>
+                                <option value="40" itemprop="size">40</option>
+                                <option value="41" itemprop="size">41</option>
+                                <option value="42" itemprop="size">42</option>
+                            </select>
+                            <label for="color">Farge</label>
+                            <select name="color" id="color">
+                                <option value="grå" itemprop="color">grå</option>
+                                <option value="hvit" itemprop="color">hvit</option>
+                                <option value="blå" itemprop="color">blå</option>
+                            </select>
+                            <button><i class="fa-regular fa-heart" style="color: #177b17;"></i>Legg til favoritter</button>
                             <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
-                    </article>
+                            <!--KILDE: microdata for pris og størrelse er hentet fra forelesning om emnet-->
+                        </form>
+                    </section>
 
-                    <article class="pinkshoe">
-                        <img src="css/img/running-shoe-371624_960_720.jpg" alt="Pink sneakers">
+                    <section>
+                        <img itemprop="image" src="css/img/running-shoe-371624_960_720.jpg" alt="Pink sneakers">
                         <!--KILDE: bildet hentet fra https://pixabay.com/no/photos/l%C3%B8pesko-sko-brooks-371624/-->
-                        <ul>
-                            <li>Størrelse: 37-43</li>
-                            <li>Farge: rosa, blå</li>
-                            <li>Spesifikasjon: Gortex</li>
-                            <li>Varebeholdning: på lager</li>
-                            <li>Pris: 1599,-</li>
-                        </ul>
-                            <i class="fa-regular fa-heart" style="color: #177b17;"></i>
+                        <h6>MIZUNO</h6>
+                        <p>Joggesko til dame for bruk til løping på asfalt</p>
+                        <!--KILDE: fiktiv produkttekst til bildet er hentet med inspirasjon fra XXL.no-->
+                        <form itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <meta itemprop="priceCurrency" content="NOK">
+                            <span itemprop="price" content="1599">Pris: 1599 kr</span>
+                            <label for="size">Størrelse</label>
+                            <select name="size" id="size">
+                                <option value="37" itemprop="size">37</option>
+                                <option value="38" itemprop="size">38</option>
+                                <option value="39" itemprop="size">39</option>
+                                <option value="40" itemprop="size">40</option>
+                                <option value="41" itemprop="size">41</option>
+                                <option value="42" itemprop="size">42</option>
+                                <option value="43" itemprop="size">43</option>
+                            </select>
+                            <label for="color">Farge</label>
+                            <select name="color" id="color">
+                                <option value="rosa" itemprop="color">rosa</option>
+                                <option value="blå" itemprop="color">blå</option>
+                            </select>
+                            <button><i class="fa-regular fa-heart" style="color: #177b17;"></i>Legg til favoritter</button>
                             <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
-                    </article>
+                            <!--KILDE: microdata for pris og størrelse er hentet fra forelesning om emnet-->
+                        </form>
+                    </section>
                 </section>
             </main>
-            <footer id="flex-bottom">
+            <footer id="flex-bottom" itemscope itemtype="https://schema.org/ContactPoint">
                 <p><i class="fa-brands fa-instagram" style="color: #177b17;" aria-label="skobutikkens instagram profil"></i></p>
                 <p><i class="fa-brands fa-square-facebook" style="color: #177b17;" aria-label="skobutikkens facebook side"></i></p>
-                <p class="contact">Kontakt oss</p>
-                <p><i class="fa-solid fa-envelope" style="color: #177b17;" aria-label="skobutikkens epostadresse"></i></p>
-                <p><i class="fa-solid fa-phone" style="color: #177b17;" aria-label="skobutikkens telefonnummer"></i></p>
+                <p itemprop="contactType" class="contact">Kontakt oss</p>
+                <p itemprop="email"><i class="fa-solid fa-envelope" style="color: #177b17;" aria-label="skobutikkens epostadresse"></i></p>
+                <p itemprop="telephone"><i class="fa-solid fa-phone" style="color: #177b17;" aria-label="skobutikkens telefonnummer"></i></p>
                 <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
-                <a href="#main" class="skip" aria-label="navigasjon til toppen av siden">Gå til toppen av siden</a>
+                <a href="#main" class="skip" aria-label="navigering til toppen av siden">Gå til toppen av siden</a>
             </footer>
         </div>
     </body>

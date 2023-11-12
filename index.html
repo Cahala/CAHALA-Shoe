@@ -23,36 +23,41 @@
         <link rel="stylesheet" href="css/fontawesome/css/fontawesome.css">
         <link rel="stylesheet" href="css/fontawesome/css/brands.css">
         <link rel="stylesheet" href="css/fontawesome/css/solid.css">
+
         <title>CAHALA Shoe - nettbutikk for sko til hver anlending</title>
     </head>
-    <body>
-        <div id="grid-container">
+    <body itemscope itemtype="https://schema.org/Organization">
+        <div id="grid-container" itemprop="brand">
             <header>
                 <a href="#forside-seksjoner" class="skip" aria-label="navigering til varekategoriene">varekategoriene</a>
                 <a href="#flex-bottom" class="skip" aria-label="navigering til kontaktinformasjon">kontaktinformasjon</a>
                 <!-- KILDE: brukt https://www.w3schools.com/accessibility/accessibility_skip_links.php-->
                 <div class="flex-container-forside">
                     <nav class="navbar-forside">
-                        <a href="index.html"><i class="fa-solid fa-bars" aria-label="gå til forsiden"></i> Meny</a>
-                        <a href="#"><i class="fa-solid fa-user" aria-label="gå til din profil"></i> Profil</a> 
-                        <a href="#"><i class="fa-solid fa-heart" aria-label="Se dine favoritter"></i> Favoritter</a> 
-                        <a href="#"><i class="fa-solid fa-cart-shopping" aria-label="Se varer lagt i handlekurven"></i> Handlekurv</a> 
-                        <a href="analyse.html"><i class="fa-solid fa-chart-simple" aria-label="analyse av nettsiden"></i> Analyse</a>
+                        <a href="leveranse.html"><i class="fa-solid fa-circle-info" aria-label="gå til informasjon"></i>  Informasjon</a>
+                        <a href="produkt.html"><i class="fa-solid fa-shoe-prints" aria-label="alle sko"></i>Produkter</a>
+                        <a href="#"><i class="fa-solid fa-user" aria-label="gå til din profil"></i>  Profil</a> 
+                        <a href="#"><i class="fa-solid fa-heart" aria-label="Se dine favoritter"></i>  Favoritter</a> 
+                        <a href="#"><i class="fa-solid fa-cart-shopping" aria-label="Se varer lagt i handlekurven"></i>  Handlekurv</a> 
+                        <a href="analyse.html"><i class="fa-solid fa-chart-simple" aria-label="analyse av nettsiden"></i>  Analyse</a>
+                        <!--KILDE: ikoner er hentet fra fontawesome.com-->
                         <form>
-                            <label aria-label="søkefunksjon">Søk</label>
-                                <input type="search" aria-label="søkefelt">
+                            <input type="search" placeholder="..." title="search">
+                            <button type="submit" title="Søk her etter"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <!--KILDE: https://www.w3schools.com/tags/tag_input.asp-->
+                            <!--KILDE: ikoner er hentet fra fontawesome.com-->
+<!--CSS: endre størrelse og utseende for søk-knapp-->
                         </form>
-                        <!--KILDE: https://www.w3schools.com/tags/tag_input.asp-->
                     </nav>
                     <!--KILDE: brukt https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_icon_bar_v
-                                for å sette ikonene til teksten med linker-->
+                    for å sette ikonene til teksten med linker-->
                 </div>
             </header>
-            <main id="main">
-                    <h1><a href="index.html" aria-label="gå til forsiden">CAHALA Shoe</a></h1>
-                    <p>Her finner du sko til hele familien, til alle anledninger. Sjekk ut vårt utvalg, 
+            <main itemscope itemtype="https://schema.org/Offers">
+                    <h1 itemprop="name"><a href="index.html" aria-label="gå til forsiden">CAHALA Shoe</a></h1>
+                    <p itemprop="description">Her finner du sko til hele familien, til alle anledninger. Sjekk ut vårt utvalg, 
                         og få med deg høstens beste kampanjer på sko hos oss.</p>
-                    <p>Vi har delt inn vårt utvalg av sko, kampanjer og informasjon så det skal være 
+                    <p itemprop="description">Vi har delt inn vårt utvalg av sko, kampanjer og informasjon så det skal være 
                         enkelt for deg å finne det du trenger for en fortreffelig handel hos oss. 
                     </p>
                 <section id="forside-seksjoner">
@@ -64,12 +69,12 @@
                     <!--KILDE: brukt https://www.altcademy.com/blog/how-to-link-a-button-to-another-page-in-html/ for å få til link på knapp-->
                 </section>
             </main>
-            <footer id="flex-bottom">
+            <footer id="flex-bottom" itemscope itemtype="https://schema.org/ContactPoint">
                 <p><i class="fa-brands fa-instagram" style="color: #177b17;" aria-label="skobutikkens instagram profil"></i></p>
                 <p><i class="fa-brands fa-square-facebook" style="color: #177b17;" aria-label="skobutikkens facebook side"></i></p>
-                <p class="contact">Kontakt oss</p>
-                <p><i class="fa-solid fa-envelope" style="color: #177b17;" aria-label="skobutikkens epostadresse"></i></p>
-                <p><i class="fa-solid fa-phone" style="color: #177b17;" aria-label="skobutikkens telefonnummer"></i></p>
+                <p itemprop="contactType" class="contact">Kontakt oss</p>
+                <p itemprop="email"><i class="fa-solid fa-envelope" style="color: #177b17;" aria-label="skobutikkens epostadresse"></i></p>
+                <p itemprop="telephone"><i class="fa-solid fa-phone" style="color: #177b17;" aria-label="skobutikkens telefonnummer"></i></p>
                 <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
                 <a href="#main" class="skip" aria-label="navigering til toppen av siden">Gå til toppen av siden</a>
             </footer>

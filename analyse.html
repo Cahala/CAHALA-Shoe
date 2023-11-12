@@ -23,9 +23,10 @@
         <link rel="stylesheet" href="css/fontawesome/css/fontawesome.css">
         <link rel="stylesheet" href="css/fontawesome/css/brands.css">
         <link rel="stylesheet" href="css/fontawesome/css/solid.css">
+
         <title>CAHALA Shoe - analyse av nettbutikk av sko</title>    
     </head>
-    <body>
+    <body itemscope itemtype="https://schema.org/WebPage">
         <div id="grid-container">
             <header id="header">
                 <a href="#nokkelord" class="skip" aria-label="navigering til nøkkelord">Nøkkelord</a>
@@ -36,20 +37,25 @@
                 <div class="flex-container">
                     <h1><a href="index.html">CAHALA Shoe</a></h1>
                     <nav class="navbar">
-                        <a href="index.html"><i class="fa-solid fa-bars" aria-label="gå til forsiden"></i> Meny</a>
-                        <a href="#"><i class="fa-solid fa-user" aria-label="gå til din profil"></i> Profil</a> 
-                        <a href="#"><i class="fa-solid fa-heart" aria-label="Se dine favoritter"></i> Favoritter</a> 
-                        <a href="#"><i class="fa-solid fa-cart-shopping" aria-label="Se varer lagt i handlekurven"></i> Handlekurv</a> 
-                        <a href="analyse.html"><i class="fa-solid fa-chart-simple" aria-label="analyse av nettsiden"></i> Analyse</a>
+                        <a href="leveranse.html"><i class="fa-solid fa-circle-info" aria-label="gå til informasjon"></i>Informasjon</a>
+                        <a href="produkt.html"><i class="fa-solid fa-shoe-prints" aria-label="alle sko"></i>Produkter</a>
+                        <a href="#"><i class="fa-solid fa-user" aria-label="gå til din profil"></i>Profil</a> 
+                        <a href="#"><i class="fa-solid fa-heart" aria-label="Se dine favoritter"></i>Favoritter</a> 
+                        <a href="#"><i class="fa-solid fa-cart-shopping" aria-label="Se varer lagt i handlekurven"></i>Handlekurv</a> 
+                        <a href="analyse.html"><i class="fa-solid fa-chart-simple" aria-label="analyse av nettsiden"></i>Analyse</a>
+                        <!--KILDE: ikoner er hentet fra fontawesome.com-->
                         <form>
-                            <label for="search">Søk</label>
-                                <input type="search" aria-label="search">
+                            <input type="search" placeholder="..." title="search">
+                            <button type="submit" title="Søk her etter"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <!--KILDE: https://www.w3schools.com/tags/tag_input.asp-->
+                            <!--KILDE: ikoner er hentet fra fontawesome.com-->
+<!--CSS: endre størrelse og utseende for søk-knapp-->
                         </form>
-                        <!--KILDE: https://www.w3schools.com/tags/tag_input.asp-->
+
                     </nav>
                 </div>
             </header>
-            <main id="analyse">
+            <main id="analyse" itemscope itemtype="https://schema.org/Product">
                 <ul class="breadcrumb">
                     <li><a href="index.html" aria-label="link til forsiden">Forside</a></li>
                     <li><a href="analyse.html" aria-label="link til analayse">Analyse</a></li>
@@ -101,10 +107,10 @@
                         <li>Barnesko</li>
                     </ul>
                     <p>Fire grafiske eksempler som viser søksresultater på noen av nøkkelordene</p>
-                    <img src="css/img/nokkelord/Overgangssko.jpg" alt="Graf over overgangsko med riktig og feil stavemåte">
-                    <img src="css/img/nokkelord/Vintersko.jpg" alt="Graf over mest brukt søkeord av vintersko, vintersøvler og termostøvler">   
-                    <img src="css/img/nokkelord/pensko.jpg" alt="Graf over mest brukte søkeord av pensko, pumps, ballerina, bunadsko og stiletthæler">
-                    <img src="css/img/nokkelord/barne_dame_herre.jpg" alt="Graf over forekomsten av søk på barnesko, damesko og herresko">
+                    <img class="nokkel" src="css/img/nokkelord/Overgangssko.jpg" alt="Graf over overgangsko med riktig og feil stavemåte">
+                    <img class="nokkel" src="css/img/nokkelord/Vintersko.jpg" alt="Graf over mest brukt søkeord av vintersko, vintersøvler og termostøvler">   
+                    <img class="nokkel" src="css/img/nokkelord/pensko.jpg" alt="Graf over mest brukte søkeord av pensko, pumps, ballerina, bunadsko og stiletthæler">
+                    <img class="nokkel" src="css/img/nokkelord/barne_dame_herre.jpg" alt="Graf over forekomsten av søk på barnesko, damesko og herresko">
 <!--CSS: gjøre bildene større-->
                 </section>
 
@@ -153,27 +159,26 @@
                     <h3>Universell utforming (UU)</h3>
                     <h4>Forside</h4>
                     <p>Ved analyse av forsiden fikk jeg; 1 varsling.<br>
-                        Varslingen er på teksten <em>kontakt oss</em> i "footer". Varslet sier at det 
+                        Varslingen er på teksten "kontakt oss" i "footer". Varslet sier at det 
                         mulig er en overskrift, men at det ikke er et overskriftselement.</p>
                     <img src="css/img/webaim/forside.jpg" alt="UU analyse fra Webaim for forsiden">
 
                     <h4>Produktside</h4>
                     <p>Ved analyse av produktsiden fikk jeg;
-                        4 varslinger.<br> Det ene varslet er i "header", på navigasjonselemente <em>meny</em>.
+                        4 varslinger.<br> Det ene varslet er i "header", på navigasjonselemente "meny".
                         Varslet sier det er en overflødig lenke, og at tilstøtende lenker går til 
                         samme URL. De tre andre varslingene er i "main" og "footer", og gjelder for 
-                        brødsmule navigeringen, <em>filtrer</em> og <em>kontakt oss</em>. 
+                        brødsmule navigeringen, "filtrer" og "kontakt oss". 
                         Varslene sier at det mulig er en overskrift, men at det ikke er et 
                         overskriftselement.</p>
                     <img src="css/img/webaim/Produktside.jpg" alt="UU analyse fra Webaim for produktsiden">
                     
                     <h4>Leveranse-/informasjonsside</h4>
-                    <p>Ved UU analyse (accessibility og best practices) av produktsiden fikk jeg;
-                        5 varslinger.<br> Tre av de er samme som for produktsiden; <em>meny</em> i 
-                        "header", brødsmule navigeringen og <em>kontakt oss</em> i "footer". Et nytt
-                        varsel er i undermenyen på <em>betaling</em>. Varslet sier at et overskriftsnivå
-                        er hoppet over. Siste varslet er i selve informasjons teksten 
-                        i "main", hvor varslet er at det mulig er en overskrift, men er ikke 
+                    <p>Ved analyse av produktsiden fikk jeg; 5 varslinger.<br> 
+                        Tre av de er samme som for produktsiden; "meny" i "header", brødsmule navigeringen 
+                        og "kontakt oss" i "footer". Et nytt varsel er i undermenyen på "betaling". Varslet 
+                        sier at et overskriftsnivå er hoppet over. Siste varslet er i selve informasjons 
+                        teksten i "main", hvor varslet er at det mulig er en overskrift, men er ikke 
                         et overskriftselement.</p>
                     <img src="css/img/webaim/Leveranse.jpg" alt="UU analyse fra Webaim for leveranse og informasjonsiden">
 <!--CSS: gjøre bildene større eller at to av bildene er ved siden av hverandre og tredje midtstilt under-->
@@ -484,8 +489,6 @@
                             <th>ChatGPT</th>
                             <th>Webaim</th>
                         </tr>
-<!--CSS: gjøre endringer på mellomrom mellom tabellene-->
-<!--CSS: gjøre endringer på width på tabellene-->
                         <tr>
                             <td rowspan="12" class="multi-row">UU</td>
                             <td>Semantisk HTML</td><!--Resultat-->
@@ -687,6 +690,7 @@ for å sett inn tabellen ovenfor-->
                     <h3>Bildeeksempler på før og etter utbedring</h3>
                     <p>Alle bildeeksemplene er tatt i utgangspunkt i mobiloppsett, med tanke på mobil first
                         prisnippet. Mobiloppsett i disse eksmeplene er med iPhone 12/13 Pro Max</p>
+                    
                     <h5>Forsiden</h5>
                     <figure>
                         <img src="css/img/For_forbedring/Forsiden_mobil_12_13_pro.jpg" alt="fremvising av forsiden til nettsiden før forbedringer er gjort">
@@ -698,7 +702,6 @@ for å sett inn tabellen ovenfor-->
                     </figure>
                     <figure>
                         <img src="css/img/Nettside_etter_forbedring/forsiden_mobile.jpg" alt="fremvising av forsiden til nettsiden etter forbedringer er gjort">
-                        <figcaption>Etter: </figcaption>
                     </figure>
 
                     <h5>Produktsiden</h5>
@@ -710,8 +713,7 @@ for å sett inn tabellen ovenfor-->
                         </figcaption>
                     </figure>                    
                     <figure>
-                        <img src="css/img/Nettside_etter_forbedring/produkt.jpg" alt="fremvising av produktsiden til nettsiden ettter forbedringer er gjort">
-                        <figcaption>Etter: </figcaption>
+                        <img src="css/img/Nettside_etter_forbedring/produkt.jpg" alt="fremvising av produktsiden til nettsiden etter forbedringer er gjort">
                     </figure>
 
                     <h5>Leveranse</h5>
@@ -723,7 +725,6 @@ for å sett inn tabellen ovenfor-->
                     </figure>
                     <figure>
                         <img src="css/img/Nettside_etter_forbedring/Leveranse.jpg"  alt="fremvising av leveransesiden til nettsiden før forbedringer er gjort">
-                        <figcaption>Etter:</figcaption>
                     </figure>
                     <!--KILDE: brukte ChatGPT som hjelp til kode for hvordan sette inn bildetekst.-->
                 </section>
@@ -731,34 +732,52 @@ for å sett inn tabellen ovenfor-->
                 <section>
                     <h3>SEO og UU resultater etter utbedring</h3>
                     <h5>Forside</h5>
-                    <p>Lighthouse</p>
-                    <p>Resultatet av UU-analyse etter forbedring av siden</p>
+                    <p>Resultatet av UU-analyse med Lighthouse etter forbedring av siden</p>
                     <img src="css/img/Mobile/Etter_forbedring/Lighthouse/Foriside_UU_1.jpg" alt="1 av 2 fremvising av UU-resultat for forsiden">
                     <img src="css/img/Mobile/Etter_forbedring/Lighthouse/Foriside_UU_2.jpg" alt="2 av 2 fremvising av UU-resultat for forsiden">
-                    <p>Resultatet av SEO-analyse etter forbedring av siden</p>
+                    <p>Resultatet av SEO-analyse med Lighthouse etter forbedring av siden</p>
                     <img src="css/img/Mobile/Etter_forbedring/Lighthouse/Forside_SEO.jpg" alt="fremvising av SEO-resultat for forsiden">
-                    <p>Webaim</p>
+                    <p>Resultatet av analyse med Webaim</p>
                     <img src="css/img/Mobile/Etter_forbedring/Webaim/forside.jpg" alt="fremvisning av resultatene fra Webaim">
 
                     <h5>Produktside</h5>
-                    <p>Lighthouse</p>
-                    <p>Resultatet av UU-analyse etter forbedring av siden</p>
+                    <p>Resultatet av UU-analyse med Lighthouse etter forbedring av siden</p>
                     <img src="css/img/Mobile/Etter_forbedring/Lighthouse/Produkt_UU_1.jpg" alt="1 av 2 fremvising av UU-resultat for produktsiden">
                     <img src="css/img/Mobile/Etter_forbedring/Lighthouse/Produkt_UU_2.jpg" alt="2 av 2 fremvising av UU-resultat for produktsiden">
-                    <p>Resultatet av SEO-analyse etter forbedring av siden</p>
+                    <p>Resultatet av SEO-analyse med Lighthouse etter forbedring av siden</p>
                     <img src="css/img/Mobile/Etter_forbedring/Lighthouse/Produkt_SEO.jpg" alt="fremvising av SEO-resultat for produktsiden">
-                    <p>Webaim</p>
+                    <p>Resultatet av analyse med Webaim</p>
                     <img src="css/img/Mobile/Etter_forbedring/Webaim/produkt.jpg" alt="fremvisning av resultatene fraWebaim">
                     
                     <h5>Leveranse-/informasjonsside</h5>
-                    <p>Lighthouse</p>
-                    <p>Resultatet av UU-analyse etter forbedring av siden</p>
+                    <p>Resultatet av UU-analyse med Lighthouse etter forbedring av siden</p>
                     <img src="css/img/Mobile/Etter_forbedring/Lighthouse/Leveranse_UU_1.jpg" alt="1 av 2 fremvising av UU-resultat for leveransesiden">
                     <img src="css/img/Mobile/Etter_forbedring/Lighthouse/Leveranse_UU_2.jpg" alt="1 av 2 fremvising av UU-resultat for leveransesiden">
-                    <p>Resultatet av SEO-analyse etter forbedring av siden</p>
-                    <img src="css/img/Mobile/Etter_forbedring/Lighthouse/Leversanse_SEO.jpg" alt="fremvising av SEO-resultat for leveransesiden">>
-                    <p>Webaim</p>
-                    <img src="css/img/Mobile/Etter_forbedring/Webaim/Leveranse.jpg" alt="fremvisning av resultatene fra Webaim">
+                    <p>Resultatet av SEO-analyse med Lighthouse etter forbedring av siden</p>
+                    <img src="css/img/Mobile/Etter_forbedring/Lighthouse/Leversanse_SEO.jpg" alt="fremvising av SEO-resultat for leveransesiden">
+                    <p>Resultatet av analyse med Webaim</p>
+                    <img src="css/img/Mobile/Etter_forbedring/Webaim/Leveranse.jpg" alt="">
+                
+                    <h5>Oppsummering av resultatene etter utbedring</h5> 
+                    <p>Alle sidene hadde en SEO på 91% før utbeding, i etterkant av utbedingen har SEO for 
+                        forsiden økt til 100%, mens SEO for produktsiden er gått til 92 % og for leveranse-
+                        /informasjonssiden er fortsatt på 91% med bemerkelse om at det <em>brukes ikke lesbar
+                        skriftstørrelse</em>
+                    </p>
+                    <p>Forsiden og produktsiden hadde 100% på UU-analysen før forbedring.
+                        Informasjonssiden fikk 96% på accessibility og 100% på best practices. For Forsiden
+                        og leveranse-/informasjonssiden har det blitt endringer til det negative etter 
+                        utbedring. Forsiden har gått ned til 94% på accessibility, med bemerkelsen 
+                        <em>skjemaelementer uten tilknyttende etiketter</em>. Leveranse-/informasjonssiden har 
+                        gått ned til 91% på accessibility med samme bemerkelse som for forsiden, men også
+                        <em>overskriftelementer er ikke i en sekvensielt synkende rekkefølge.</em>
+                    </p>
+                    <p>Alle sidene har fått kontrastfeil etter utbedring. Det anvises ikke hvor, og det
+                        er ikke gjort noe med skrift- eller bakgrunnsfargen siden testen før utbedring.
+                        Alle sidnne har også fremdeles varslinger, noen av dem er samme som før utbedring,
+                        men som er blitt sjekket opp, og skal ikke være noe å gjøre med. Samt at ny er
+                        tilkommet for alle sidene; navigasjon for <em>søk.</em>
+                    </p>
                 </section>
 
                 <section>
@@ -777,14 +796,14 @@ for å sett inn tabellen ovenfor-->
                 </section>
 
             </main>
-            <footer id="flex-bottom">
+            <footer id="flex-bottom" itemscope itemtype="https://schema.org/ContactPoint">
                 <p><i class="fa-brands fa-instagram" style="color: #177b17;" aria-label="skobutikkens instagram profil"></i></p>
                 <p><i class="fa-brands fa-square-facebook" style="color: #177b17;" aria-label="skobutikkens facebook side"></i></p>
-                <p class="contact">Kontakt oss</p>
-                <p><i class="fa-solid fa-envelope" style="color: #177b17;" aria-label="skobutikkens epostadresse"></i></p>
-                <p><i class="fa-solid fa-phone" style="color: #177b17;" aria-label="skobutikkens telefonnummer"></i></p>
+                <p itemprop="contactType" class="contact">Kontakt oss</p>
+                <p itemprop="email"><i class="fa-solid fa-envelope" style="color: #177b17;" aria-label="skobutikkens epostadresse"></i></p>
+                <p itemprop="telephone"><i class="fa-solid fa-phone" style="color: #177b17;" aria-label="skobutikkens telefonnummer"></i></p>
                 <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
-                <a href="#analyse" class="skip" aria-label="navigering til toppen av siden">Gå til toppen av siden</a>
+                <a href="#main" class="skip" aria-label="navigering til toppen av siden">Gå til toppen av siden</a>
             </footer>
         </div>
     </body>

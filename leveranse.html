@@ -23,9 +23,10 @@
         <link rel="stylesheet" href="css/fontawesome/css/fontawesome.css">
         <link rel="stylesheet" href="css/fontawesome/css/brands.css">
         <link rel="stylesheet" href="css/fontawesome/css/solid.css">
+
         <title>CAHALA Shoe - informasjon om levering av sko fra nettbutikken</title>
     </head>
-    <body class="leveranse">
+    <body class="leveranse" itemscope itemtype="https://schema.org/WebPage">
         <div id="grid-container">
             <header id="header">
                 <a href="#flex-bottom" class="skip" aria-label="navigasjon til kontaktinformasjon">kontaktinformasjon</a>
@@ -33,26 +34,47 @@
                 <div class="flex-container">
                     <h1><a href="index.html" aria-label="link til forsiden">CAHALA Shoe</a></h1>
                     <nav class="navbar">
-                        <a href="index.html"><i class="fa-solid fa-bars" aria-label="gå til forsiden"></i> Meny</a>
+                        <a href="leveranse.html"><i class="fa-solid fa-circle-info" aria-label="gå til informasjon"></i>  Informasjon</a>
+                        <a href="produkt.html"><i class="fa-solid fa-shoe-prints" aria-label="alle sko"></i>Produkter</a>
                         <a href="#"><i class="fa-solid fa-user" aria-label="gå til din profil"></i> Profil</a> 
                         <a href="#"><i class="fa-solid fa-heart" aria-label="Se dine favoritter"></i> Favoritter</a> 
                         <a href="#"><i class="fa-solid fa-cart-shopping" aria-label="Se varer lagt i handlekurven"></i> Handlekurv</a> 
                         <a href="analyse.html"><i class="fa-solid fa-chart-simple" aria-label="analyse av nettsiden"></i> Analyse</a>
+                        <!--KILDE: ikoner er hentet fra fontawesome.com-->
                         <form>
-                            <label aria-label="søkefunksjon">Søk</label>
-                                <input type="search" aria-label="søkefelt">
+                            <input type="search" placeholder="..." title="search">
+                            <button type="submit" title="Søk her etter"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <!--KILDE: https://www.w3schools.com/tags/tag_input.asp-->
+                            <!--KILDE: ikoner er hentet fra fontawesome.com-->
+<!--CSS: endre størrelse og utseende for søk-knapp-->
                         </form>
-                        <!--KILDE: https://www.w3schools.com/tags/tag_input.asp-->
                     </nav>
                 </div>
             </header>
             <main id="leveranse">
-                <ul class="breadcrumb">
-                    <li><a href="index.html" aria-label="til forsiden">Forside</a></li>
-                    <li><a href="leveranse.html" aria-label="til leveransesiden">Leveranse</a></li>
+                <ul class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="index.html" aria-label="link til forsiden">
+                            <span itemprop="name">Forside</span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="#" aria-label="link til kampanje">
+                            <span itemprop="name">Informasjon</span>
+                        </a>
+                        <meta itemprop="position" content="2">
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="leveranse.html" aria-label="link til kampanje">
+                            <span itemprop="name">Leveranse</span>
+                        </a>
+                        <meta itemprop="position" content="3">
+                    </li>
                 </ul>
                 <!--KILDE: brukt https://www.w3schools.com/howto/howto_css_breadcrumbs.asp for å lage
                 breadcrumbs i steden for den stistrukturen jeg opprinnelig hadde laget-->
+                <!--KILDE: microdata for breadcrumbs er hentet fra forelesning om emnet-->
 
                     <h1>LEVERANSE</h1>
                     <h5>Betaling</h5>
@@ -60,26 +82,26 @@
                     <h5>Retur</h5>
                     <h5>Kontakt oss</h5>
                 <section class="textbox">
-                    <p>Levering skjer med posten. Valget for hvordan de ønsker dine varer levert velder du i forbindelse med fullføring av kjøpet. 
+                    <p itemprop="description">Levering skjer med posten. Valget for hvordan de ønsker dine varer levert velder du i forbindelse med fullføring av kjøpet. 
                     Du kan velge alternativet som passer deg best.</p>
                     <p>Leverigsalternativene du kan velge mellom er;</p>
-                    <ul>
-                        <li>hjem i din postkasse</li>
-                        <li>nærmeste post i butikk</li>
-                        <li>hente pakken i pakkeautomat</li>
+                    <ul itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <li itemprop="deliveryMethod">hjem i din postkasse</li>
+                        <li itemprop="deliveryMethod">nærmeste post i butikk</li>
+                        <li itemprop="deliveryMethod">hente pakken i pakkeautomat</li>
                     </ul>
-                    <p>Dersom du bestiller flere varer og en varene ikke er på lager vil du motta informasjon angående leveransen og varen kan bli 
+                    <p itemprop="description">Dersom du bestiller flere varer og en varene ikke er på lager vil du motta informasjon angående leveransen og varen kan bli 
                     sendt i to pakker.</p>
                 </section>
             </main>
-            <footer id="flex-bottom">
+            <footer id="flex-bottom" itemscope itemtype="https://schema.org/ContactPoint">
                 <p><i class="fa-brands fa-instagram" style="color: #177b17;" aria-label="skobutikkens instagram profil"></i></p>
                 <p><i class="fa-brands fa-square-facebook" style="color: #177b17;" aria-label="skobutikkens facebook side"></i></p>
-                <p class="contact">Kontakt oss</p>
-                <p><i class="fa-solid fa-envelope" style="color: #177b17;" aria-label="skobutikkens epostadresse"></i></p>
-                <p><i class="fa-solid fa-phone" style="color: #177b17;" aria-label="skobutikkens telefonnummer"></i></p>
+                <p itemprop="contactType" class="contact">Kontakt oss</p>
+                <p itemprop="email"><i class="fa-solid fa-envelope" style="color: #177b17;" aria-label="skobutikkens epostadresse"></i></p>
+                <p itemprop="telephone"><i class="fa-solid fa-phone" style="color: #177b17;" aria-label="skobutikkens telefonnummer"></i></p>
                 <!--KILDER: Ikoner hentet fra https://fontawesome.com/-->
-                <a href="#leveranse" class="skip" aria-label="navigasjon til toppen av siden">Gå til toppen av siden</a>
+                <a href="#main" class="skip" aria-label="navigering til toppen av siden">Gå til toppen av siden</a>
             </footer>
         </div>
     </body>
