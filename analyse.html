@@ -49,7 +49,6 @@
                             <button type="submit" title="Søk her etter"><i class="fa-solid fa-magnifying-glass"></i></button>
                             <!--KILDE: https://www.w3schools.com/tags/tag_input.asp-->
                             <!--KILDE: ikoner er hentet fra fontawesome.com-->
-<!--CSS: endre størrelse og utseende for søk-knapp-->
                         </form>
 
                     </nav>
@@ -63,7 +62,6 @@
                 <!--KILDE: brukt https://www.w3schools.com/howto/howto_css_breadcrumbs.asp for å lage
                 breadcrumbs i steden for den stistrukturen jeg opprinnelig hadde laget-->
                 <h1>ANALYSE AV NETTSIDEN</h1>
-<!--CSS: flytte overskriften litt ned-->
                 <section id="nokkelord">
                     <h2>NØKKELORD</h2>
                     <p>For å komme frem til ulike nøkkelord tenkte jeg igjennom hvilke ord som er 
@@ -111,7 +109,6 @@
                     <img class="nokkel" src="css/img/nokkelord/Vintersko.jpg" alt="Graf over mest brukt søkeord av vintersko, vintersøvler og termostøvler">   
                     <img class="nokkel" src="css/img/nokkelord/pensko.jpg" alt="Graf over mest brukte søkeord av pensko, pumps, ballerina, bunadsko og stiletthæler">
                     <img class="nokkel" src="css/img/nokkelord/barne_dame_herre.jpg" alt="Graf over forekomsten av søk på barnesko, damesko og herresko">
-<!--CSS: gjøre bildene større-->
                 </section>
 
                 <section id="for-utbedring">
@@ -124,7 +121,6 @@
                         Det er blitt gjort analyse av hver siden på nettsiden, men noen av sidene fikk 
                         likt resultat og er derfor fremstilt her ved at de er slått sammen.</p>
                 </article>
-<!--CSS: mellomrom mellom article og section-->
                 <section>
                     <h3>Analyse av søkemotoroptimaliseringen (SEO)</h3>
                     <p>Analysen for alle tre sidene ga et utslag på 91%. Tilbakemelding 
@@ -139,7 +135,6 @@
                     <p>Analysen for forside og produktside ga et utslag på 100% på begge prinsippene.</p>
                     <img src="css/img/Mobile/Lighthouse/FORSIDE/UU/1.jpg" alt="UU anlyse med Lighthouse for forsiden og produkt siden, bilde 1">
                     <img src="css/img/Mobile/Lighthouse/FORSIDE/UU/2.jpg" alt="UU anlyse med Lighthouse for forsiden og produkt siden, bilde 2">
-<!--CSS: Få bilde 2 til å være i flukt med bilde 1 i toppen eller midtstilt i høyde -->
                     <h4>Leveranse-/informasjonsside</h4>
                     <p>Analysen ga et utslag på accessibility med 96% og 100% for best practices for 
                         siden med leveranseinformasjon. For accessibility var tilbakemeldingen at 
@@ -148,7 +143,7 @@
                         nettsiden.</p>
                     <img src="css/img/Mobile/Lighthouse/INFORMASJON_LEVERANSE/UU/1.jpg" alt="UU anlyse med Lighthouse for produktsiden produkt siden, bilde 1">
                     <img src="css/img/Mobile/Lighthouse/INFORMASJON_LEVERANSE/UU/2.jpg" alt="UU anlyse med Lighthouse for produktsiden produkt siden, bilde 2">
-<!--CSS: Få bilde 2 til å være i flukt med bilde 1 i toppen eller midtstilt i høyde -->
+
                 </section>
 
                 <article>
@@ -181,7 +176,7 @@
                         teksten i "main", hvor varslet er at det mulig er en overskrift, men er ikke 
                         et overskriftselement.</p>
                     <img src="css/img/webaim/Leveranse.jpg" alt="UU analyse fra Webaim for leveranse og informasjonsiden">
-<!--CSS: gjøre bildene større eller at to av bildene er ved siden av hverandre og tredje midtstilt under-->
+
                 </section>
 
                 <article>
@@ -201,10 +196,9 @@
                         <td>Tittelen er kort, men det er viktig å sikre at tittelen er beskrivende,
                             unik og representerer nøyaktig hva siden handler om</td><!--Forside-->
                         <td>Gir indikasjon på at siden handler om produkter fra CAHALA shoe,
-                            men bør inkludere flere søkeord og en mer spesifikk beskrivende tittel
-                            som kan forbedre søkemotoroptimaliseringen.</td><!--Produkt-->
+                            men bør inkludere flere søkeord og en mer spesifikk beskrivende tittel.</td><!--Produkt-->
                         <td>Gir indikasjon for siden, men bør være mer beskrivende og 
-                            inkludere nøkkelord, for å forbedre søkbarheten</td><!--Leveranse-->
+                            inkludere nøkkelord.</td><!--Leveranse-->
                     </tr>
                     <tr>
                         <th>Kildeattribusjoner</th><!--Tema-->
@@ -218,70 +212,61 @@
                     <tr>
                         <th>Reponsivt design og brukervennlighet</th><!--Tema-->
                         <td>Å bruke Font Awesome-ikoner og legge til funksjoner som navigasjonsmeny
-                            som reagerer på brukerens interaksjon (klikk på hamburgerikonet) er god
-                            praksis for mobillayout</td><!--Forside-->
-                        <td>Ved å implemnetere hamburgermenyen og ikonene fra Font Awesome er lurt 
-                            for å forbedre en god brukervennlighet, spesielt for mobile enheter.</td><!--Produkt-->
+                            som reagerer på brukerens interaksjo er god praksis for mobillayout</td><!--Forside-->
+                        <td>Å implementere hamburgermenyen og ikonene fra Font Awesome er lurt 
+                            for å forbedre en god brukervennlighet</td><!--Produkt-->
                         <td>Implementering av hamburgermeny og bruk av Font Awesome-ikoner kan 
-                            forbedre brukeropplevelsen, spesielt for mobil.</td><!--Leveranse-->
+                            forbedre brukeropplevelsen for mobil</td><!--Leveranse-->
                     </tr>
                     <tr>
                         <th >URL-struktur</th><!--Tema-->
                         <td>Knapper er satt til å peke på "#" eller bestemte sider som "produkt.html"
-                            og "leveranse.html". Å bruke meningsfulle URL-er kan forbedre både
+                            og "leveranse.html". Bruke av meningsfulle URL-er kan forbedre både
                             brukeropplevelsen og SEO.</td><!--Forside-->
-                        <td>Dessverre ser det ikke ut til å være direkte implementert HTML-kode.
-                            Å ha betydningsfulle URL-er kan bidra til bedre rangeringer.</td><!--Produkt-->
-                        <td>Det ser ikke ut til å være direkte implementert i koden. En meningsfull
+                        <td>Det ser ikke ut til at det er direkte implementert HTML-kode</td><!--Produkt-->
+                        <td>Det er HTML-kode som ikke ser ut til å være direkte implementert. En meningsfull
                             URL-struktur med relevante nøkkelord kan forbedre søkemotoroptimaliseringen.</td><!--Leveranse-->
                     </tr>
                     <tr>
                         <th>Semantisk HTML</th><!--Tema-->
                         <td>Bruken av "header", "main" og "footer" er positiv for semantikken i 
-                            HTML-koden og hjelper søkermotorer med å forstå innholdet.</td><!--Forside-->
-                        <td>Bruken av riktig struktur med "header", "main" og "footer" er en god
-                            praksis. Det hjelper søkermotorer med å forstå nettsidens innhold.</td><!--Produkt-->
-                        <td>Ved å bruke riktig struktur med sematisk HTML er positivt.
-                            Det gjør at søkermotoren forstår innholdet på nettsiden.</td><!--Leveranse-->
+                            HTML-koden</td><!--Forside-->
+                        <td>Bruken av riktig struktur med "header", "main" og "footer" er god
+                            praksis</td><!--Produkt-->
+                        <td>Ved å bruke riktig struktur med sematisk HTML er positivt.</td><!--Leveranse-->
                     </tr>
                     <tr>
                         <th>Optimalisering av bildeattributter</th><!--Tema-->
-                        <td>Det er ingen bilder i koden din, men det er viktig å inkludere "alt"-
-                            attributtet for bilder når de brukes.</td><!--Forside-->
-                        <td>Det er flott at du bruker "alt"-attributtet for bildene.
-                            Dette bidrar tilbedre forståelse av bildene for søkermotorer.</td><!--Produkt-->
+                        <td>Det er ingen bilder i koden din</td><!--Forside-->
+                        <td>Det er flott at du bruker "alt"-attributtet for bildene</td><!--Produkt-->
                         <td>Du bruker ikke bilder på denne siden.</td><!--Leveranse-->
                     </tr>
                     <tr>
                         <th>Feil i koden</th><!--Tema-->
                         <td>Kan ikke se noen åpenbare feil i koden, men det kan være lurt å
-                            validere HTML-koden for å sikre deg at den er feilfri.</td><!--Forside-->
+                            validere HTML-koden</td><!--Forside-->
                         <td>Ikke beskrevet</td><!--Produkt-->
                         <td>Ikke beskrevet</td><!--Leveranse-->
                     </tr>
                     <tr>
                         <th>Bruk av JavaScript</th><!--Tema-->
                         <td>Sørg for at navigasjonsmenyen fungere tilfredsstillende for 
-                            brukere uten JavaScript, da søkermotorer som Google kan ha problemer
-                            med å indeksere innhold som er avhengig av JavaScript.</td><!--Forside-->
+                            brukere uten JavaScript</td><!--Forside-->
                         <td>Selvom Javascript er deaktivert, er det lurt å sørge for at nettstedet 
                             fungerer tilfredsstillende, fordi søkermotoren stort sett ikke
-                            indekserer JavaScript-avhengig innhold.</td><!--Produkt-->
+                            indekserer JavaScript-avhengig innhold</td><!--Produkt-->
                         <td>Sørg for at nettstedet fungerer tilfredsstillende selv når 
-                            JavaScript er deaktivert, siden søkermotorer ikke alltid indekserer 
-                            JavaScript-avhengig innhold.</td><!--Leveranse-->
+                            JavaScript er deaktivert</td><!--Leveranse-->
                     </tr>
                     <tr>
                         <th>Tekstinnhold</th><!--Tema-->
-                        <td>Siden ser ut til å mangle mye tekstinnhold. Å inkludere informativt
-                            tekstinnhold på sider er viktig for SEO.</td><!--Forside-->
+                        <td>Siden ser ut til å mangle mye tekstinnhold</td><!--Forside-->
                         <td>Det er positivt å se at du har inkludert informasjon om produktene
-                            som størrelse, farge, spesifikasjoner, lagerbeholdning og pris. Å 
-                            inkludere detaljerte beskrivelser kan være gunstig for SEO.</td><!--Produkt-->
+                            som størrelse, farge, spesifikasjoner, lagerbeholdning og pris</td><!--Produkt-->
                         <td>Du har inkludert detaljer rundt levering og alternativer, noe som er
                             positivt. Det kan være fordelaktig å inkludere enda mer spesifikk
                             informasjon om forsendelse, betaling og retur. Det gir et mer 
-                            detaljert bilde av tjenestene.</td><!--Leveranse-->
+                            detaljert bilde av tjenestene</td><!--Leveranse-->
                     </tr>
                     <tr>
                         <th>Sosiale medier og kontakt</th><!--Tema-->
@@ -435,7 +420,7 @@
                 <section>
                     <h3>Sammenligning av resultatene</h3>
                     <table>
-                        <caption>I tabellen nedenfor vises resultatene fra SEO-analyse med anbefalinger
+                        <caption>Sammenligning av resultatene fra SEO-analyse med anbefalinger
                             om forbedring.</caption>
                         <tr>
                             <th>Analyse</th>
@@ -480,18 +465,18 @@
                         </tr>
                     </table>
                     <table>
-                        <caption>I tabellen nedenfor vises resultatene fra UU-analyse med anbefalinger
+                        <caption>Sammenligning av resultatene fra UU-analyse med anbefalinger
                             om forbedring.</caption>
                         <tr>
                             <th>Analyse</th>
-                            <th>Resultat</th>
+                            <th>Tema</th>
                             <th>Lighthouse</th>
                             <th>ChatGPT</th>
                             <th>Webaim</th>
                         </tr>
                         <tr>
                             <td rowspan="12" class="multi-row">UU</td>
-                            <td>Semantisk HTML</td><!--Resultat-->
+                            <td>Semantisk HTML</td><!--Tema-->
                             <td>Leveranse/informasjonsiden: har overskriftselementet som ikke er i 
                                 en sekvensielt synkende rekkefølge.</td><!--Lighthouse-->
                             <td>Mangler semantisk betydning for enkelte av elementene, for eksempel 
@@ -502,14 +487,14 @@
                                 overskriftelement, og et overskriftsnivå hoppet over.</td><!--Webaim-->
                         </tr>
                         <tr>
-                            <td>URL-struktur</td><!--Resultat-->
+                            <td>URL-struktur</td><!--Tema-->
                             <td>Ingen bemerkelse</td><!--Lighthouse-->
                             <td>Ingen bemerkelse</td><!--ChatGPT-->
                             <td>Produktsiden: på navigasjonselemente "meny" er det en overflødig lenke, 
                                 og tilstøtende lenker går til samme URL</td><!--Webaim-->
                         </tr>
                         <tr>
-                            <td>Tilgjenglighet</td><!--Resultat-->
+                            <td>Tilgjenglighet</td><!--Tema-->
                             <td>Ingen bemerkelse</td><!--Lighthouse-->
                             <td>Noen av knappene har onclick-hendelser uten tilstrekkelig alternativ 
                                 for tastaturnavigasjon eller skjermlesere. Elementer som vises etter 
@@ -517,58 +502,58 @@
                             <td>Ingen bemerkelse</td><!--Webaim-->
                         </tr>
                         <tr>
-                            <td>Navigasjon</td><!--Resultat-->
+                            <td>Navigasjon</td><!--Tema-->
                             <td>Ingen bemerkelse</td><!--Lighthouse-->
                             <td>Lenker som "Meny", "Profil", "Favoritter", etc., kan forbedres ved 
                                 å inkludere mer beskrivende tekst i tillegg til ikonene</td><!--ChatGPT-->
                             <td>Ingen bemerkelse</td><!--Webaim-->
                         </tr>
                         <tr>
-                            <td>Farge og kontrast</td><!--Resultat-->
+                            <td>Farge og kontrast</td><!--Tema-->
                             <td>Ingen bemerkelse</td><!--Lighthouse-->
                             <td>Sjekk kontrastforholdet mellom tekst og bakgrunn</td><!--ChatGPT-->
                             <td>Ingen bemerkelse</td><!--Webaim-->
                         </tr>
                         <tr>
-                            <td>Responsivitet</td><!--Resultat-->
+                            <td>Responsivitet</td><!--Tema-->
                             <td>Ingen bemerkelse</td><!--Lighthouse-->
                             <td>Sjekk at nettstedet er responsivt og fungerer godt på ulike enhetene</td><!--ChatGPT-->
                             <td>Ingen bemerkelse</td><!--Webaim-->
                         </tr>
                         <tr>
-                            <td>JavaScript</td><!--Resultat-->
+                            <td>JavaScript</td><!--Tema-->
                             <td>Ingen bemerkelse</td><!--Lighthouse-->
                             <td>Unngå å bruke skjult tekst eller skjulte navigasjonselementer som 
                                 bare vises ved bruk av CSS eller JavaScript</td><!--ChatGPT-->
                             <td>Ingen bemerkelse</td><!--Webaim-->
                         </tr>
                         <tr>
-                            <td>Alternativ tekst for ikoner</td><!--Resultat-->
+                            <td>Alternativ tekst for ikoner</td><!--Tema-->
                             <td>Ingen bemerkelse</td><!--Lighthouse-->
                             <td>Det mangler tekstbaserte beskrivelser (alt-tekst) for ikonene</td><!--ChatGPT-->
                             <td>Ingen bemerkelse</td>
                         </tr>
                         <tr>
-                            <td>Skjermleservennlighet</td><!--Resultat-->
+                            <td>Skjermleservennlighet</td><!--Tema-->
                             <td>Ingen bemerkelse</td><!--Lighthouse-->
                             <td>Gjennomgå koden for å sikre at skjermlesere kan tolke innholdet</td><!--ChatGPT-->
                             <td>Ingen bemerkelse</td><!--Webaim-->
                         </tr>
                         <tr>
-                            <td>Skriftstørrelsejustering</td><!--Resultat-->
+                            <td>Skriftstørrelsejustering</td><!--Tema-->
                             <td>Ingen bemerkelse</td><!--Lighthouse-->
                             <td>Produktsiden: teksten kan være for liten for enkelte brukere</td><!--ChatGPT-->
                             <td>Ingen bemerkelse</td><!--Webaim-->
                         </tr>
                         <tr>
-                            <td>Tastaturnavigasjon</td><!--Resultat-->
+                            <td>Tastaturnavigasjon</td><!--Tema-->
                             <td>Ingen bemerkelse</td><!--Lighthouse-->
                             <td>Produktsiden: det ser ikke ut til å være tastaturvennlig 
                                 navigasjon for personer som ikke bruker mus eller berøringsskjerm</td><!--ChatGPT-->
                             <td>Ingen bemerkelse</td><!--Webaim-->
                         </tr>
                         <tr>
-                            <td>Språkidentifisering</td><!--Resultat-->
+                            <td>Språkidentifisering</td><!--Tema-->
                             <td>Ingen bemerkelse</td><!--Lighthouse-->
                             <td>HTML-avsnittet angir engelsk som språket "en"-attributt i 
                                 html lang="en", det viktig å være konsistent i språkbruken på 
