@@ -248,7 +248,6 @@ main h1 a{
 #product-box section form select, label {
     display: flex;
     font-size: 3vw;
-    justify-content: space-;
 }
 
 
@@ -330,8 +329,8 @@ main h1 a{
 }
 
 #analyse section h3{
-    font-size: 2.5vw;
-    margin: 1rem;
+    font-size: 3vw;
+    margin: 4rem 1rem 1rem 1rem;
 }
 
 #analyse section h4{
@@ -357,15 +356,20 @@ main h1 a{
 
 #analyse section figure img{
     width: 80%;
-      border-radius: 8px;
-      border: 5px solid black;
-      margin: 1rem;
-      justify-content: center;
-    }
-    #analyse section figure figcaption{
-        font-size: 2.5vw;
-        margin-bottom: 1.5rem;
-    }
+    border-radius: 8px;
+    border: 5px solid black;
+    margin: 0 1rem 0 1.5rem;
+    justify-content: center;
+}
+#analyse section figure figcaption{
+    font-size: 2.5vw;
+    margin: 0 1rem 2rem 1rem;
+}
+#analyse section p {
+    text-align: left;
+    font-size: 2.5vw;
+    margin-bottom: 0.5rem;
+}
 
 #analyse table caption{
     font-size: 2.5vw;
